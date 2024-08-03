@@ -21,10 +21,10 @@ import image from "../images/motion-background.jpg";
 const imageAltText = "purple and blue abstract background";
 
 /**
- * Sort description that expands on your title on the Home component.
+ * Short description that expands on your title on the Home component.
  */
 const description =
-  "I'm a UI/UX student studying at Barnett Technical University. I enjoy creating unique and simplistic user interfaces in creative ways.";
+  "I'm an online BS in Data Science student studying at Indian Institute of Technology Madras, along with Btech in CSE from Keshav Memorial Institue of Technology, Hyderabad.";
 
 /**
  * List of some of skills or technologies you work on, are learning,
@@ -32,10 +32,10 @@ const description =
  */
 const skillsList = [
   "Web design",
-  "User experience",
-  "Inclusive design",
-  "Focus group testing",
-  "Mobile user interfaces",
+  "Data Analysis",
+  "Python programming",
+  "Frontend development",
+  "UI/UX design",
   "Graphic design",
 ];
 
@@ -45,7 +45,7 @@ const skillsList = [
  * about you on a professional level.
  */
 const detailOrQuote =
-  "I am passionate about solving problems in new creative ways to drive innovation. By leveraging my UI/UX experience I continually look for new and better ways to make tech accessible by all.";
+  "I am passionate about solving problems in new creative ways to drive innovation. By leveraging my Data Science experience I continually look for new and better ways to make data interpretation more efficient along with developing new and better applications and software.";
 
 const About = () => {
   return (
