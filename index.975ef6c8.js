@@ -27189,7 +27189,7 @@ var _motionBackgroundJpgDefault = parcelHelpers.interopDefault(_motionBackground
 const imageAltText = "purple and blue abstract background";
 /**
  * Short description that expands on your title on the Home component.
- */ const description = "I'm an online BS in Data Science student studying at Indian Institute of Technology Madras, along with Btech in CSE from Keshav Memorial Institue of Technology, Hyderabad.";
+ */ const description = "I'm an online BS in Data Science student studying at Indian Institute of Technology Madras.";
 /**
  * List of some of skills or technologies you work on, are learning,
  * passionate about, or enjoy,
@@ -28939,67 +28939,36 @@ const Education = ()=>{
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "education",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                                children: "Indian Institute Of Technology Madras"
-                            }, void 0, false, {
-                                fileName: "src/Components/Education.jsx",
-                                lineNumber: 9,
-                                columnNumber: 11
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                children: "Bachelors of Science in Data Science and Programing"
-                            }, void 0, false, {
-                                fileName: "src/Components/Education.jsx",
-                                lineNumber: 10,
-                                columnNumber: 11
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                children: "2024 - 2028"
-                            }, void 0, false, {
-                                fileName: "src/Components/Education.jsx",
-                                lineNumber: 11,
-                                columnNumber: 11
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/Components/Education.jsx",
-                        lineNumber: 8,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                                children: "Keshav Memotial Institute Of Technology"
-                            }, void 0, false, {
-                                fileName: "src/Components/Education.jsx",
-                                lineNumber: 14,
-                                columnNumber: 11
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                children: "Bachelor of Technology in Computer Science and Engineering"
-                            }, void 0, false, {
-                                fileName: "src/Components/Education.jsx",
-                                lineNumber: 15,
-                                columnNumber: 11
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                children: "2024 - 2028"
-                            }, void 0, false, {
-                                fileName: "src/Components/Education.jsx",
-                                lineNumber: 16,
-                                columnNumber: 11
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/Components/Education.jsx",
-                        lineNumber: 13,
-                        columnNumber: 9
-                    }, undefined)
-                ]
-            }, void 0, true, {
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                            children: "Indian Institute Of Technology Madras"
+                        }, void 0, false, {
+                            fileName: "src/Components/Education.jsx",
+                            lineNumber: 9,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                            children: "Bachelors of Science in Data Science and Programing"
+                        }, void 0, false, {
+                            fileName: "src/Components/Education.jsx",
+                            lineNumber: 10,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                            children: "2024 - 2028"
+                        }, void 0, false, {
+                            fileName: "src/Components/Education.jsx",
+                            lineNumber: 11,
+                            columnNumber: 11
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/Components/Education.jsx",
+                    lineNumber: 8,
+                    columnNumber: 9
+                }, undefined)
+            }, void 0, false, {
                 fileName: "src/Components/Education.jsx",
                 lineNumber: 7,
                 columnNumber: 7
