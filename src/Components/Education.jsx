@@ -10,11 +10,6 @@ const Education = () => {
           <p>Bachelors of Science in Data Science and Programing</p>
           <p>2024 - 2028</p>
         </div>
-        <div>
-          <h3>Keshav Memotial Institute Of Technology</h3>
-          <p>Bachelor of Technology in Computer Science and Engineering</p>
-          <p>2024 - 2028</p>
-        </div>
       </div>
     </section>
   );
