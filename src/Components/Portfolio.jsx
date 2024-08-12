@@ -57,7 +57,7 @@ const projectList = [
   {
     title: "My CS50 Project",
     description: "My Project",
-    url: "green-pebble-06675ce1e.5.azurestaticapps.net",
+    url: "https://green-pebble-06675ce1e.5.azurestaticapps.net",
     
   },
 ];
