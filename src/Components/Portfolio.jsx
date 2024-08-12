@@ -57,7 +57,7 @@ const projectList = [
   {
     title: "My CS50 Project",
     description: "My Project",
-    url: "cs50project.shoaibssm.me",
+    url: "https:cs50project.shoaibssm.me",
     
   },
 ];
