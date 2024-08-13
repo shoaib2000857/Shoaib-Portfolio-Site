@@ -27223,7 +27223,7 @@ const About = ()=>{
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 style: {
                     backgroundColor: "white",
-                    width: "50%",
+                    width: "70%",
                     padding: "4rem",
                     margin: "3rem auto",
                     textAlign: "center",
@@ -27278,7 +27278,8 @@ const About = ()=>{
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                         style: {
-                            padding: "1rem 3rem 0"
+                            padding: "1rem 1rem 1rem 0",
+                            width: "100%"
                         },
                         children: detailOrQuote
                     }, void 0, false, {
