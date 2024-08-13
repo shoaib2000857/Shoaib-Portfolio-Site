@@ -27253,7 +27253,7 @@ const About = ()=>{
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         style: {
                             textAlign: "left",
-                            columns: 1,
+                            columns: window.innerWidth < 700 ? 1 : 2,
                             fontSize: "1.25rem",
                             margin: "2rem 3rem",
                             gap: "3rem",
@@ -28831,7 +28831,7 @@ const Portfolio = ()=>{
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         style: {
-                            maxWidth: "40%",
+                            maxWidth: "100%",
                             alignSelf: "center",
                             flexWrap: "wrap"
                         },
@@ -28857,6 +28857,11 @@ const Portfolio = ()=>{
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         className: "container",
+                        style: {
+                            display: "grid",
+                            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+                            gap: "1rem"
+                        },
                         children: projectList.map((project)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                 className: "box",
                                 children: [
