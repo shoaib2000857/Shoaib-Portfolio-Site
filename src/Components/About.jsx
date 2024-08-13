@@ -54,7 +54,7 @@ const About = () => {
       <div
         style={{
           backgroundColor: "white",
-          width: "50%",
+          width: "70%",
           padding: "4rem",
           margin: "3rem auto",
           textAlign: "center",
@@ -79,7 +79,7 @@ const About = () => {
           ))}
         </ul>
         <hr />
-        <p style={{ padding: "1rem 3rem 0" }}>{detailOrQuote}</p>
+        <p style={{ padding: "1rem 1rem 1rem 0", width: "100%"}}>{detailOrQuote}</p>
       </div>
     </section>
   );
