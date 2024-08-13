@@ -17,8 +17,10 @@ const Header = () => {
         background: "rgba(255,255,255,0.75)",
         padding: "1rem",
         top: 0,
-        width: "100%",
+        width: "100vw",
+        maxWidth: "100%",
         zIndex: 10,
+        flexWrap: "wrap", // Add this line to allow flex items to wrap
       }}
     >
       <a href="#home">Home</a>
@@ -26,7 +28,6 @@ const Header = () => {
       <a href="#education">Education</a>
       <a href="#portfolio">Portfolio</a>
       <a href="#footer">Contact</a>
-
     </div>
   );
 };

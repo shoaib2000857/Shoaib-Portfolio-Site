@@ -58,6 +58,7 @@ const About = () => {
           padding: "4rem",
           margin: "3rem auto",
           textAlign: "center",
+          flexWrap: "wrap",
         }}
       >
         <h2>About Myself</h2>
@@ -66,10 +67,11 @@ const About = () => {
         <ul
           style={{
             textAlign: "left",
-            columns: 2,
+            columns: 1,
             fontSize: "1.25rem",
             margin: "2rem 3rem",
             gap: "3rem",
+            flexWrap: "wrap",
           }}
         >
           {skillsList.map((skill) => (
