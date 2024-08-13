@@ -12,7 +12,8 @@ body {
   margin: 0;
   overflow-x: hidden;
   padding: 0;
-  width: 100%;
+  width: 100vw;
+  max-width: 100%;
 }
 
 
@@ -20,11 +21,13 @@ div#main {
   display: flex;
   flex-direction: column;
   width: 100vw;
+  max-width: 100%;
 }
 
 section {
   position: relative;
   width: 100vw;
+  max-width: 100%;
 }
 
 section.min-height {
