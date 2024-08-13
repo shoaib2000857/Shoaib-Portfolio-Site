@@ -27253,7 +27253,7 @@ const About = ()=>{
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         style: {
                             textAlign: "left",
-                            columns: window.innerWidth < 700 ? 1 : 2,
+                            columns: window.innerWidth < 600 ? 1 : 2,
                             fontSize: "1.25rem",
                             margin: "2rem 3rem",
                             gap: "3rem",
