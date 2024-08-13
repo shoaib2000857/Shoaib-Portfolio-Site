@@ -67,7 +67,7 @@ const About = () => {
         <ul
           style={{
             textAlign: "left",
-            columns: 1,
+            columns: window.innerWidth < 600 ? 1 : 2, // Adjust the number of columns based on the width of the browser
             fontSize: "1.25rem",
             margin: "2rem 3rem",
             gap: "3rem",

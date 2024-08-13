@@ -65,8 +65,8 @@ const Portfolio = () => {
   return (
     <section className="padding" id="portfolio">
       <h2 style={{ textAlign: "center" }}>Portfolio</h2>
-      <div style={{ display: "flex", flexDirection: "row", paddingTop: "3rem",flexWrap: "wrap", }}>
-        <div style={{ maxWidth: "40%", alignSelf: "center",flexWrap: "wrap", }}>
+      <div style={{ display: "flex", flexDirection: "row", paddingTop: "3rem", flexWrap: "wrap" }}>
+        <div style={{ maxWidth: "100%", alignSelf: "center", flexWrap: "wrap" }}>
           <img
             src={image}
             style={{
@@ -79,7 +79,7 @@ const Portfolio = () => {
             alt={imageAltText}
           />
         </div>
-        <div className="container">
+        <div className="container" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "1rem" }}>
           {projectList.map((project) => (
             <div className="box" key={project.title}>
               <a href={project.url} target="_blank" rel="noopener noreferrer">
