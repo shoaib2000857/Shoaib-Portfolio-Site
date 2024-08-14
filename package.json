@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Shoaib Portfolio Home Page",
   "source": "src/index.html",
-  "homepage": "http://shoaib2000857.github.io/Shoaib-Portfolio-Site",
+  "homepage": "http://shoaib2000857.github.io/Shoaib-Portfolio-Site/",
   "scripts": {
     "start": "parcel",
     "build": "parcel build",
