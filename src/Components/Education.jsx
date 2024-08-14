@@ -10,6 +10,9 @@ const Education = () => {
           <p>Bachelors of Science in Data Science and Programing</p>
           <p>2024 - 2028</p>
         </div>
+        <div style ={{flexWrap: "wrap", marginTop: "3em"}}>
+          <h3><a href="/certifications">Certifications</a></h3>
+        </div>
       </div>
     </section>
   );
