@@ -27140,7 +27140,7 @@ const siteProps = {
 const primaryColor = "#4E567E";
 const secondaryColor = "#D2F1E4";
 const App = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.BrowserRouter), {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.HashRouter), {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             id: "main",
             children: [
@@ -34990,8 +34990,8 @@ const Education = ()=>{
                                 children: "Certifications"
                             }, void 0, false, {
                                 fileName: "src/Components/Education.jsx",
-                                lineNumber: 15,
-                                columnNumber: 13
+                                lineNumber: 14,
+                                columnNumber: 15
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/Components/Education.jsx",
