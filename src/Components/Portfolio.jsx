@@ -20,6 +20,7 @@ import React from "react";
  * freely use on your site.
  */
 import image from "../images/design-desk.jpeg";
+import bg from "../images/dark-bg.jpg";
 
 const imageAltText = "desktop with books and laptop";
 
@@ -64,30 +65,47 @@ const projectList = [
 const Portfolio = () => {
   return (
     <section className="padding" id="portfolio">
-      <h2 style={{ textAlign: "center" }}>Portfolio</h2>
-      <div style={{ display: "flex", flexDirection: "row", paddingTop: "3rem", flexWrap: "wrap" }}>
-        <div style={{ maxWidth: "100%", alignSelf: "center", flexWrap: "wrap" }}>
-          <img
-            src={image}
+      <img className="background" src={bg} alt={imageAltText} />
+      <div
+        style={{
+          backgroundColor: "white",
+          width: "80%",
+          padding: "4rem",
+          margin: "3rem auto",
+          textAlign: "center",
+          flexWrap: "wrap",
+        }}
+      >
+        <h2 style={{ textAlign: "center", color: "black" }}>Portfolio</h2>
+
+        <img
+          src={image}
+          alt={imageAltText}
+          style={{
+            width: "70%",
+            height: "30%",}}
+        />
+        <div
+          style={{ display: "flex", flexDirection: "row", paddingTop: "3rem", flexWrap: "wrap" }}
+        >
+          <div style={{ maxWidth: "100%", alignSelf: "center", flexWrap: "wrap" }}></div>
+          <div
+            className="container"
             style={{
-              animation: "1s ease-out 0s 1 slideInLeft",
-              height: "90%",
-              width: "100%",
-              objectFit: "cover",
-              flexWrap: "wrap",
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+              gap: "1rem",
             }}
-            alt={imageAltText}
-          />
-        </div>
-        <div className="container" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "1rem" }}>
-          {projectList.map((project) => (
-            <div className="box" key={project.title}>
-              <a href={project.url} target="_blank" rel="noopener noreferrer">
-                <h3 style={{ flexBasis: "40px" }}>{project.title}</h3>
-              </a>
-              <p className="small">{project.description}</p>
-            </div>
-          ))}
+          >
+            {projectList.map((project) => (
+              <div className="box" key={project.title}>
+                <a href={project.url} target="_blank" rel="noopener noreferrer">
+                  <h3 style={{ flexBasis: "40px" }}>{project.title}</h3>
+                </a>
+                <p className="small">{project.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
