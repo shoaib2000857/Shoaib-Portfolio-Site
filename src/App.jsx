@@ -87,7 +87,6 @@ const App = () => {
     <HashRouter>
       <div id="main">
         <Header />
-
         <Routes>
           <Route
             exact={true}
