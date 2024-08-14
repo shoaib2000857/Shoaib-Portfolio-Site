@@ -55,7 +55,7 @@
 // export default App;
 
 import * as React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 import About from "./Components/About";
 import Certifications from "./Components/Certifications";
@@ -84,13 +84,13 @@ const secondaryColor = "#D2F1E4";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div id="main">
         <Header />
 
         <Routes>
           <Route
-            exact
+            exact={true}
             path="/"
             element={
               <>
@@ -106,7 +106,7 @@ const App = () => {
         </Routes>
         <Footer {...siteProps} primaryColor={primaryColor} secondaryColor={secondaryColor} />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
