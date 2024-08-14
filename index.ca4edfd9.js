@@ -2503,14 +2503,14 @@ process.umask = function() {
     return 0;
 };
 
-},{}],"ShInH":[function(require,module,exports) {
+},{}],"fAha2":[function(require,module,exports) {
 "use strict";
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
-module.bundle.HMR_BUNDLE_ID = "890e741a975ef6c8";
+module.bundle.HMR_BUNDLE_ID = "35a9829cca4edfd9";
 /* global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE, chrome, browser, globalThis, __parcel__import__, __parcel__importScripts__, ServiceWorkerGlobalScope */ /*::
 import type {
   HMRAsset,
@@ -2892,11 +2892,11 @@ function hmrAcceptRun(bundle, id) {
     acceptedAssets[id] = true;
 }
 
-},{}],"8lqZg":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$20e5 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{}],"dGSeV":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$459b = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$20e5.prelude(module);
+$parcel$ReactRefreshHelpers$459b.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -2909,17 +2909,17 @@ var _reactDom = require("react-dom");
 var _app = require("./App");
 var _appDefault = parcelHelpers.interopDefault(_app);
 (0, _reactDom.render)(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _appDefault.default), {}, void 0, false, {
-    fileName: "src/index.js",
+    fileName: "src/HomePage/index.js",
     lineNumber: 10,
     columnNumber: 8
 }, undefined), document.getElementById("app"));
 
-  $parcel$ReactRefreshHelpers$20e5.postlude(module);
+  $parcel$ReactRefreshHelpers$459b.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom":"j6uA9","./App":"e9Zfo","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom":"j6uA9","./App":"agldT","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("./cjs/react-jsx-dev-runtime.development.js");
 
@@ -27051,11 +27051,11 @@ module.exports = require("./cjs/scheduler.development.js");
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop === "function") __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
 })();
 
-},{}],"e9Zfo":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$2430 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{}],"agldT":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$bf8c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$2430.prelude(module);
+$parcel$ReactRefreshHelpers$bf8c.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -27106,7 +27106,7 @@ const App = ()=>{
         id: "main",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
-                fileName: "src/App.jsx",
+                fileName: "src/HomePage/App.jsx",
                 lineNumber: 45,
                 columnNumber: 7
             }, undefined),
@@ -27114,22 +27114,22 @@ const App = ()=>{
                 name: siteProps.name,
                 title: siteProps.title
             }, void 0, false, {
-                fileName: "src/App.jsx",
+                fileName: "src/HomePage/App.jsx",
                 lineNumber: 46,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutDefault.default), {}, void 0, false, {
-                fileName: "src/App.jsx",
+                fileName: "src/HomePage/App.jsx",
                 lineNumber: 47,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _educationDefault.default), {}, void 0, false, {
-                fileName: "src/App.jsx",
+                fileName: "src/HomePage/App.jsx",
                 lineNumber: 48,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _portfolioDefault.default), {}, void 0, false, {
-                fileName: "src/App.jsx",
+                fileName: "src/HomePage/App.jsx",
                 lineNumber: 49,
                 columnNumber: 7
             }, undefined),
@@ -27138,13 +27138,13 @@ const App = ()=>{
                 primaryColor: primaryColor,
                 secondaryColor: secondaryColor
             }, void 0, false, {
-                fileName: "src/App.jsx",
+                fileName: "src/HomePage/App.jsx",
                 lineNumber: 50,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
-        fileName: "src/App.jsx",
+        fileName: "src/HomePage/App.jsx",
         lineNumber: 44,
         columnNumber: 5
     }, undefined);
@@ -27154,16 +27154,16 @@ exports.default = App;
 var _c;
 $RefreshReg$(_c, "App");
 
-  $parcel$ReactRefreshHelpers$2430.postlude(module);
+  $parcel$ReactRefreshHelpers$bf8c.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./Components/About":"kouZu","./Components/Footer":"7GWgX","./Components/Header":"9Dt2F","./Components/Home":"jIEVO","./Components/Portfolio":"lCaEt","./Components/Education":"6QZcy","./styles.css":"lW6qc","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kouZu":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$17a8 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./Components/About":"em0Qj","./Components/Footer":"cJ8sO","./Components/Header":"3AZ55","./Components/Home":"gWFfS","./Components/Portfolio":"2vYe8","./Components/Education":"iHwXR","./styles.css":"fGlFy","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"em0Qj":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$3393 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$17a8.prelude(module);
+$parcel$ReactRefreshHelpers$3393.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -27216,7 +27216,7 @@ const About = ()=>{
                 src: (0, _motionBackgroundJpgDefault.default),
                 alt: imageAltText
             }, void 0, false, {
-                fileName: "src/Components/About.jsx",
+                fileName: "src/HomePage/Components/About.jsx",
                 lineNumber: 53,
                 columnNumber: 7
             }, undefined),
@@ -27233,7 +27233,7 @@ const About = ()=>{
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                         children: "About Myself"
                     }, void 0, false, {
-                        fileName: "src/Components/About.jsx",
+                        fileName: "src/HomePage/Components/About.jsx",
                         lineNumber: 64,
                         columnNumber: 9
                     }, undefined),
@@ -27241,12 +27241,12 @@ const About = ()=>{
                         className: "large",
                         children: description
                     }, void 0, false, {
-                        fileName: "src/Components/About.jsx",
+                        fileName: "src/HomePage/Components/About.jsx",
                         lineNumber: 65,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("hr", {}, void 0, false, {
-                        fileName: "src/Components/About.jsx",
+                        fileName: "src/HomePage/Components/About.jsx",
                         lineNumber: 66,
                         columnNumber: 9
                     }, undefined),
@@ -27262,17 +27262,17 @@ const About = ()=>{
                         children: skillsList.map((skill)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                                 children: skill
                             }, skill, false, {
-                                fileName: "src/Components/About.jsx",
+                                fileName: "src/HomePage/Components/About.jsx",
                                 lineNumber: 78,
                                 columnNumber: 13
                             }, undefined))
                     }, void 0, false, {
-                        fileName: "src/Components/About.jsx",
+                        fileName: "src/HomePage/Components/About.jsx",
                         lineNumber: 67,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("hr", {}, void 0, false, {
-                        fileName: "src/Components/About.jsx",
+                        fileName: "src/HomePage/Components/About.jsx",
                         lineNumber: 81,
                         columnNumber: 9
                     }, undefined),
@@ -27283,19 +27283,19 @@ const About = ()=>{
                         },
                         children: detailOrQuote
                     }, void 0, false, {
-                        fileName: "src/Components/About.jsx",
+                        fileName: "src/HomePage/Components/About.jsx",
                         lineNumber: 82,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/Components/About.jsx",
+                fileName: "src/HomePage/Components/About.jsx",
                 lineNumber: 54,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
-        fileName: "src/Components/About.jsx",
+        fileName: "src/HomePage/Components/About.jsx",
         lineNumber: 52,
         columnNumber: 5
     }, undefined);
@@ -27305,13 +27305,13 @@ exports.default = About;
 var _c;
 $RefreshReg$(_c, "About");
 
-  $parcel$ReactRefreshHelpers$17a8.postlude(module);
+  $parcel$ReactRefreshHelpers$3393.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../images/motion-background.jpg":"kzNvo","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kzNvo":[function(require,module,exports) {
-module.exports = require("./helpers/bundle-url").getBundleURL("bLxZJ") + "motion-background.0a6a8db0.jpg" + "?" + Date.now();
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../images/motion-background.jpg":"1F04Q","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"1F04Q":[function(require,module,exports) {
+module.exports = require("./helpers/bundle-url").getBundleURL("4BDPe") + "motion-background.82d6353d.jpg" + "?" + Date.now();
 
 },{"./helpers/bundle-url":"lgJ39"}],"lgJ39":[function(require,module,exports) {
 "use strict";
@@ -27497,11 +27497,11 @@ function registerExportsForReactRefresh(module1) {
     }
 }
 
-},{"react-refresh/runtime":"786KC"}],"7GWgX":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$8b43 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"react-refresh/runtime":"786KC"}],"cJ8sO":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$2ecc = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$8b43.prelude(module);
+$parcel$ReactRefreshHelpers$2ecc.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -27569,12 +27569,12 @@ var _youtubeSvgDefault = parcelHelpers.interopDefault(_youtubeSvg);
                             alt: "email",
                             className: "socialIcon"
                         }, void 0, false, {
-                            fileName: "src/Components/Footer.jsx",
+                            fileName: "src/HomePage/Components/Footer.jsx",
                             lineNumber: 66,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
-                        fileName: "src/Components/Footer.jsx",
+                        fileName: "src/HomePage/Components/Footer.jsx",
                         lineNumber: 65,
                         columnNumber: 11
                     }, undefined),
@@ -27587,12 +27587,12 @@ var _youtubeSvgDefault = parcelHelpers.interopDefault(_youtubeSvg);
                             alt: "Dev.to",
                             className: "socialIcon"
                         }, void 0, false, {
-                            fileName: "src/Components/Footer.jsx",
+                            fileName: "src/HomePage/Components/Footer.jsx",
                             lineNumber: 71,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
-                        fileName: "src/Components/Footer.jsx",
+                        fileName: "src/HomePage/Components/Footer.jsx",
                         lineNumber: 70,
                         columnNumber: 11
                     }, undefined),
@@ -27605,12 +27605,12 @@ var _youtubeSvgDefault = parcelHelpers.interopDefault(_youtubeSvg);
                             alt: "GitHub",
                             className: "socialIcon"
                         }, void 0, false, {
-                            fileName: "src/Components/Footer.jsx",
+                            fileName: "src/HomePage/Components/Footer.jsx",
                             lineNumber: 76,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
-                        fileName: "src/Components/Footer.jsx",
+                        fileName: "src/HomePage/Components/Footer.jsx",
                         lineNumber: 75,
                         columnNumber: 11
                     }, undefined),
@@ -27623,12 +27623,12 @@ var _youtubeSvgDefault = parcelHelpers.interopDefault(_youtubeSvg);
                             alt: "Instagram",
                             className: "socialIcon"
                         }, void 0, false, {
-                            fileName: "src/Components/Footer.jsx",
+                            fileName: "src/HomePage/Components/Footer.jsx",
                             lineNumber: 85,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
-                        fileName: "src/Components/Footer.jsx",
+                        fileName: "src/HomePage/Components/Footer.jsx",
                         lineNumber: 80,
                         columnNumber: 11
                     }, undefined),
@@ -27641,12 +27641,12 @@ var _youtubeSvgDefault = parcelHelpers.interopDefault(_youtubeSvg);
                             alt: "LinkedIn",
                             className: "socialIcon"
                         }, void 0, false, {
-                            fileName: "src/Components/Footer.jsx",
+                            fileName: "src/HomePage/Components/Footer.jsx",
                             lineNumber: 94,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
-                        fileName: "src/Components/Footer.jsx",
+                        fileName: "src/HomePage/Components/Footer.jsx",
                         lineNumber: 89,
                         columnNumber: 11
                     }, undefined),
@@ -27659,12 +27659,12 @@ var _youtubeSvgDefault = parcelHelpers.interopDefault(_youtubeSvg);
                             alt: "Medium",
                             className: "socialIcon"
                         }, void 0, false, {
-                            fileName: "src/Components/Footer.jsx",
+                            fileName: "src/HomePage/Components/Footer.jsx",
                             lineNumber: 99,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
-                        fileName: "src/Components/Footer.jsx",
+                        fileName: "src/HomePage/Components/Footer.jsx",
                         lineNumber: 98,
                         columnNumber: 11
                     }, undefined),
@@ -27677,12 +27677,12 @@ var _youtubeSvgDefault = parcelHelpers.interopDefault(_youtubeSvg);
                             alt: "Twitter",
                             className: "socialIcon"
                         }, void 0, false, {
-                            fileName: "src/Components/Footer.jsx",
+                            fileName: "src/HomePage/Components/Footer.jsx",
                             lineNumber: 104,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
-                        fileName: "src/Components/Footer.jsx",
+                        fileName: "src/HomePage/Components/Footer.jsx",
                         lineNumber: 103,
                         columnNumber: 11
                     }, undefined),
@@ -27695,18 +27695,18 @@ var _youtubeSvgDefault = parcelHelpers.interopDefault(_youtubeSvg);
                             alt: "YouTube",
                             className: "socialIcon"
                         }, void 0, false, {
-                            fileName: "src/Components/Footer.jsx",
+                            fileName: "src/HomePage/Components/Footer.jsx",
                             lineNumber: 113,
                             columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
-                        fileName: "src/Components/Footer.jsx",
+                        fileName: "src/HomePage/Components/Footer.jsx",
                         lineNumber: 108,
                         columnNumber: 11
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/Components/Footer.jsx",
+                fileName: "src/HomePage/Components/Footer.jsx",
                 lineNumber: 57,
                 columnNumber: 7
             }, undefined),
@@ -27721,13 +27721,13 @@ var _youtubeSvgDefault = parcelHelpers.interopDefault(_youtubeSvg);
                     name
                 ]
             }, void 0, true, {
-                fileName: "src/Components/Footer.jsx",
+                fileName: "src/HomePage/Components/Footer.jsx",
                 lineNumber: 117,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
-        fileName: "src/Components/Footer.jsx",
+        fileName: "src/HomePage/Components/Footer.jsx",
         lineNumber: 44,
         columnNumber: 5
     }, undefined);
@@ -27752,12 +27752,12 @@ exports.default = Footer;
 var _c;
 $RefreshReg$(_c, "Footer");
 
-  $parcel$ReactRefreshHelpers$8b43.postlude(module);
+  $parcel$ReactRefreshHelpers$2ecc.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","prop-types":"7wKI2","../images/socials/devdotto.svg":"69cpV","../images/socials/envelope.svg":"92UhI","../images/socials/github.svg":"vP2m6","../images/socials/instagram.svg":"jH0VA","../images/socials/linkedin.svg":"5XSmz","../images/socials/medium.svg":"cDDa0","../images/socials/twitter.svg":"flM6L","../images/socials/youtube.svg":"hmN7D","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"7wKI2":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","prop-types":"7wKI2","../images/socials/devdotto.svg":"ieRFL","../images/socials/envelope.svg":"ayh24","../images/socials/github.svg":"lRDpI","../images/socials/instagram.svg":"3Ztb6","../images/socials/linkedin.svg":"3rqw8","../images/socials/medium.svg":"cdUQY","../images/socials/twitter.svg":"fEMiD","../images/socials/youtube.svg":"6pAZy","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"7wKI2":[function(require,module,exports) {
 var ReactIs = require("react-is");
 // By explicitly using `prop-types` you are opting into new development behavior.
 // http://fb.me/prop-types-in-prod
@@ -28498,35 +28498,35 @@ printWarning = function(text) {
 };
 module.exports = checkPropTypes;
 
-},{"./lib/ReactPropTypesSecret":"jZTZJ","./lib/has":"fqKuf"}],"69cpV":[function(require,module,exports) {
-module.exports = require("./helpers/bundle-url").getBundleURL("bLxZJ") + "devdotto.3bb7afaf.svg" + "?" + Date.now();
+},{"./lib/ReactPropTypesSecret":"jZTZJ","./lib/has":"fqKuf"}],"ieRFL":[function(require,module,exports) {
+module.exports = require("./helpers/bundle-url").getBundleURL("4BDPe") + "devdotto.4c520fdc.svg" + "?" + Date.now();
 
-},{"./helpers/bundle-url":"lgJ39"}],"92UhI":[function(require,module,exports) {
-module.exports = require("./helpers/bundle-url").getBundleURL("bLxZJ") + "envelope.5e5e1d9e.svg" + "?" + Date.now();
+},{"./helpers/bundle-url":"lgJ39"}],"ayh24":[function(require,module,exports) {
+module.exports = require("./helpers/bundle-url").getBundleURL("4BDPe") + "envelope.20ae6c3d.svg" + "?" + Date.now();
 
-},{"./helpers/bundle-url":"lgJ39"}],"vP2m6":[function(require,module,exports) {
-module.exports = require("./helpers/bundle-url").getBundleURL("bLxZJ") + "github.51e0fbb2.svg" + "?" + Date.now();
+},{"./helpers/bundle-url":"lgJ39"}],"lRDpI":[function(require,module,exports) {
+module.exports = require("./helpers/bundle-url").getBundleURL("4BDPe") + "github.fa574a9e.svg" + "?" + Date.now();
 
-},{"./helpers/bundle-url":"lgJ39"}],"jH0VA":[function(require,module,exports) {
-module.exports = require("./helpers/bundle-url").getBundleURL("bLxZJ") + "instagram.84def2ad.svg" + "?" + Date.now();
+},{"./helpers/bundle-url":"lgJ39"}],"3Ztb6":[function(require,module,exports) {
+module.exports = require("./helpers/bundle-url").getBundleURL("4BDPe") + "instagram.7b3a1169.svg" + "?" + Date.now();
 
-},{"./helpers/bundle-url":"lgJ39"}],"5XSmz":[function(require,module,exports) {
-module.exports = require("./helpers/bundle-url").getBundleURL("bLxZJ") + "linkedin.49c2dcdf.svg" + "?" + Date.now();
+},{"./helpers/bundle-url":"lgJ39"}],"3rqw8":[function(require,module,exports) {
+module.exports = require("./helpers/bundle-url").getBundleURL("4BDPe") + "linkedin.9f03c0ac.svg" + "?" + Date.now();
 
-},{"./helpers/bundle-url":"lgJ39"}],"cDDa0":[function(require,module,exports) {
-module.exports = require("./helpers/bundle-url").getBundleURL("bLxZJ") + "medium.6232db8b.svg" + "?" + Date.now();
+},{"./helpers/bundle-url":"lgJ39"}],"cdUQY":[function(require,module,exports) {
+module.exports = require("./helpers/bundle-url").getBundleURL("4BDPe") + "medium.00a69a0f.svg" + "?" + Date.now();
 
-},{"./helpers/bundle-url":"lgJ39"}],"flM6L":[function(require,module,exports) {
-module.exports = require("./helpers/bundle-url").getBundleURL("bLxZJ") + "twitter.7541cc84.svg" + "?" + Date.now();
+},{"./helpers/bundle-url":"lgJ39"}],"fEMiD":[function(require,module,exports) {
+module.exports = require("./helpers/bundle-url").getBundleURL("4BDPe") + "twitter.34caa277.svg" + "?" + Date.now();
 
-},{"./helpers/bundle-url":"lgJ39"}],"hmN7D":[function(require,module,exports) {
-module.exports = require("./helpers/bundle-url").getBundleURL("bLxZJ") + "youtube.c3557793.svg" + "?" + Date.now();
+},{"./helpers/bundle-url":"lgJ39"}],"6pAZy":[function(require,module,exports) {
+module.exports = require("./helpers/bundle-url").getBundleURL("4BDPe") + "youtube.46ff43e6.svg" + "?" + Date.now();
 
-},{"./helpers/bundle-url":"lgJ39"}],"9Dt2F":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$2a62 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"./helpers/bundle-url":"lgJ39"}],"3AZ55":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$8862 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$2a62.prelude(module);
+$parcel$ReactRefreshHelpers$8862.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -28559,7 +28559,7 @@ const Header = ()=>{
                 href: "#home",
                 children: "Home"
             }, void 0, false, {
-                fileName: "src/Components/Header.jsx",
+                fileName: "src/HomePage/Components/Header.jsx",
                 lineNumber: 26,
                 columnNumber: 7
             }, undefined),
@@ -28567,7 +28567,7 @@ const Header = ()=>{
                 href: "#about",
                 children: "About"
             }, void 0, false, {
-                fileName: "src/Components/Header.jsx",
+                fileName: "src/HomePage/Components/Header.jsx",
                 lineNumber: 27,
                 columnNumber: 7
             }, undefined),
@@ -28575,7 +28575,7 @@ const Header = ()=>{
                 href: "#education",
                 children: "Education"
             }, void 0, false, {
-                fileName: "src/Components/Header.jsx",
+                fileName: "src/HomePage/Components/Header.jsx",
                 lineNumber: 28,
                 columnNumber: 7
             }, undefined),
@@ -28583,7 +28583,7 @@ const Header = ()=>{
                 href: "#portfolio",
                 children: "Portfolio"
             }, void 0, false, {
-                fileName: "src/Components/Header.jsx",
+                fileName: "src/HomePage/Components/Header.jsx",
                 lineNumber: 29,
                 columnNumber: 7
             }, undefined),
@@ -28591,13 +28591,13 @@ const Header = ()=>{
                 href: "#footer",
                 children: "Contact"
             }, void 0, false, {
-                fileName: "src/Components/Header.jsx",
+                fileName: "src/HomePage/Components/Header.jsx",
                 lineNumber: 30,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
-        fileName: "src/Components/Header.jsx",
+        fileName: "src/HomePage/Components/Header.jsx",
         lineNumber: 11,
         columnNumber: 5
     }, undefined);
@@ -28607,16 +28607,16 @@ exports.default = Header;
 var _c;
 $RefreshReg$(_c, "Header");
 
-  $parcel$ReactRefreshHelpers$2a62.postlude(module);
+  $parcel$ReactRefreshHelpers$8862.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"jIEVO":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$0d4d = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gWFfS":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$a5c2 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$0d4d.prelude(module);
+$parcel$ReactRefreshHelpers$a5c2.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -28656,7 +28656,7 @@ function Home({ name , title  }) {
                 src: (0, _bengalTiger80130121920JpgDefault.default),
                 alt: ""
             }, void 0, false, {
-                fileName: "src/Components/Home.jsx",
+                fileName: "src/HomePage/Components/Home.jsx",
                 lineNumber: 30,
                 columnNumber: 7
             }, this),
@@ -28672,20 +28672,20 @@ function Home({ name , title  }) {
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                         children: name
                     }, void 0, false, {
-                        fileName: "src/Components/Home.jsx",
+                        fileName: "src/HomePage/Components/Home.jsx",
                         lineNumber: 32,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                         children: title
                     }, void 0, false, {
-                        fileName: "src/Components/Home.jsx",
+                        fileName: "src/HomePage/Components/Home.jsx",
                         lineNumber: 33,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
-                fileName: "src/Components/Home.jsx",
+                fileName: "src/HomePage/Components/Home.jsx",
                 lineNumber: 31,
                 columnNumber: 7
             }, this),
@@ -28704,18 +28704,18 @@ function Home({ name , title  }) {
                     },
                     alt: imageAltText
                 }, void 0, false, {
-                    fileName: "src/Components/Home.jsx",
+                    fileName: "src/HomePage/Components/Home.jsx",
                     lineNumber: 36,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
-                fileName: "src/Components/Home.jsx",
+                fileName: "src/HomePage/Components/Home.jsx",
                 lineNumber: 35,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
-        fileName: "src/Components/Home.jsx",
+        fileName: "src/HomePage/Components/Home.jsx",
         lineNumber: 29,
         columnNumber: 5
     }, this);
@@ -28733,22 +28733,22 @@ exports.default = Home;
 var _c;
 $RefreshReg$(_c, "Home");
 
-  $parcel$ReactRefreshHelpers$0d4d.postlude(module);
+  $parcel$ReactRefreshHelpers$a5c2.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../images/down-arrow.svg":"b5nCi","prop-types":"7wKI2","../images/bengal-tiger-8013012_1920.jpg":"fndWh","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"b5nCi":[function(require,module,exports) {
-module.exports = require("./helpers/bundle-url").getBundleURL("bLxZJ") + "down-arrow.1037091f.svg" + "?" + Date.now();
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../images/down-arrow.svg":"58e6p","prop-types":"7wKI2","../images/bengal-tiger-8013012_1920.jpg":"d4KhO","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"58e6p":[function(require,module,exports) {
+module.exports = require("./helpers/bundle-url").getBundleURL("4BDPe") + "down-arrow.7e0b0025.svg" + "?" + Date.now();
 
-},{"./helpers/bundle-url":"lgJ39"}],"fndWh":[function(require,module,exports) {
-module.exports = require("./helpers/bundle-url").getBundleURL("bLxZJ") + "bengal-tiger-8013012_1920.4808442d.jpg" + "?" + Date.now();
+},{"./helpers/bundle-url":"lgJ39"}],"d4KhO":[function(require,module,exports) {
+module.exports = require("./helpers/bundle-url").getBundleURL("4BDPe") + "bengal-tiger-8013012_1920.79425dc5.jpg" + "?" + Date.now();
 
-},{"./helpers/bundle-url":"lgJ39"}],"lCaEt":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$ed0d = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"./helpers/bundle-url":"lgJ39"}],"2vYe8":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$0405 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$ed0d.prelude(module);
+$parcel$ReactRefreshHelpers$0405.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -28818,7 +28818,7 @@ const Portfolio = ()=>{
                 },
                 children: "Portfolio"
             }, void 0, false, {
-                fileName: "src/Components/Portfolio.jsx",
+                fileName: "src/HomePage/Components/Portfolio.jsx",
                 lineNumber: 67,
                 columnNumber: 7
             }, undefined),
@@ -28847,12 +28847,12 @@ const Portfolio = ()=>{
                             },
                             alt: imageAltText
                         }, void 0, false, {
-                            fileName: "src/Components/Portfolio.jsx",
+                            fileName: "src/HomePage/Components/Portfolio.jsx",
                             lineNumber: 70,
                             columnNumber: 11
                         }, undefined)
                     }, void 0, false, {
-                        fileName: "src/Components/Portfolio.jsx",
+                        fileName: "src/HomePage/Components/Portfolio.jsx",
                         lineNumber: 69,
                         columnNumber: 9
                     }, undefined),
@@ -28876,12 +28876,12 @@ const Portfolio = ()=>{
                                             },
                                             children: project.title
                                         }, void 0, false, {
-                                            fileName: "src/Components/Portfolio.jsx",
+                                            fileName: "src/HomePage/Components/Portfolio.jsx",
                                             lineNumber: 86,
                                             columnNumber: 17
                                         }, undefined)
                                     }, void 0, false, {
-                                        fileName: "src/Components/Portfolio.jsx",
+                                        fileName: "src/HomePage/Components/Portfolio.jsx",
                                         lineNumber: 85,
                                         columnNumber: 15
                                     }, undefined),
@@ -28889,30 +28889,30 @@ const Portfolio = ()=>{
                                         className: "small",
                                         children: project.description
                                     }, void 0, false, {
-                                        fileName: "src/Components/Portfolio.jsx",
+                                        fileName: "src/HomePage/Components/Portfolio.jsx",
                                         lineNumber: 88,
                                         columnNumber: 15
                                     }, undefined)
                                 ]
                             }, project.title, true, {
-                                fileName: "src/Components/Portfolio.jsx",
+                                fileName: "src/HomePage/Components/Portfolio.jsx",
                                 lineNumber: 84,
                                 columnNumber: 13
                             }, undefined))
                     }, void 0, false, {
-                        fileName: "src/Components/Portfolio.jsx",
+                        fileName: "src/HomePage/Components/Portfolio.jsx",
                         lineNumber: 82,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
-                fileName: "src/Components/Portfolio.jsx",
+                fileName: "src/HomePage/Components/Portfolio.jsx",
                 lineNumber: 68,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
-        fileName: "src/Components/Portfolio.jsx",
+        fileName: "src/HomePage/Components/Portfolio.jsx",
         lineNumber: 66,
         columnNumber: 5
     }, undefined);
@@ -28922,19 +28922,19 @@ exports.default = Portfolio;
 var _c;
 $RefreshReg$(_c, "Portfolio");
 
-  $parcel$ReactRefreshHelpers$ed0d.postlude(module);
+  $parcel$ReactRefreshHelpers$0405.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../images/design-desk.jpeg":"jSSP3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"jSSP3":[function(require,module,exports) {
-module.exports = require("./helpers/bundle-url").getBundleURL("bLxZJ") + "design-desk.df4cd0cf.jpeg" + "?" + Date.now();
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../images/design-desk.jpeg":"hJdAQ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"hJdAQ":[function(require,module,exports) {
+module.exports = require("./helpers/bundle-url").getBundleURL("4BDPe") + "design-desk.f2ae428a.jpeg" + "?" + Date.now();
 
-},{"./helpers/bundle-url":"lgJ39"}],"6QZcy":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$8bef = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"./helpers/bundle-url":"lgJ39"}],"iHwXR":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$8065 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$8bef.prelude(module);
+$parcel$ReactRefreshHelpers$8065.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -28953,7 +28953,7 @@ const Education = ()=>{
                 },
                 children: "Education"
             }, void 0, false, {
-                fileName: "src/Components/Education.jsx",
+                fileName: "src/HomePage/Components/Education.jsx",
                 lineNumber: 6,
                 columnNumber: 7
             }, undefined),
@@ -28967,38 +28967,38 @@ const Education = ()=>{
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
                             children: "Indian Institute Of Technology Madras"
                         }, void 0, false, {
-                            fileName: "src/Components/Education.jsx",
+                            fileName: "src/HomePage/Components/Education.jsx",
                             lineNumber: 9,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                             children: "Bachelors of Science in Data Science and Programing"
                         }, void 0, false, {
-                            fileName: "src/Components/Education.jsx",
+                            fileName: "src/HomePage/Components/Education.jsx",
                             lineNumber: 10,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                             children: "2024 - 2028"
                         }, void 0, false, {
-                            fileName: "src/Components/Education.jsx",
+                            fileName: "src/HomePage/Components/Education.jsx",
                             lineNumber: 11,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
-                    fileName: "src/Components/Education.jsx",
+                    fileName: "src/HomePage/Components/Education.jsx",
                     lineNumber: 8,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
-                fileName: "src/Components/Education.jsx",
+                fileName: "src/HomePage/Components/Education.jsx",
                 lineNumber: 7,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
-        fileName: "src/Components/Education.jsx",
+        fileName: "src/HomePage/Components/Education.jsx",
         lineNumber: 5,
         columnNumber: 5
     }, undefined);
@@ -29008,11 +29008,11 @@ exports.default = Education;
 var _c;
 $RefreshReg$(_c, "Education");
 
-  $parcel$ReactRefreshHelpers$8bef.postlude(module);
+  $parcel$ReactRefreshHelpers$8065.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"lW6qc":[function() {},{}]},["1xC6H","ShInH","8lqZg"], "8lqZg", "parcelRequiref11c")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"fGlFy":[function() {},{}]},["1xC6H","fAha2","dGSeV"], "dGSeV", "parcelRequiref11c")
 
-//# sourceMappingURL=index.975ef6c8.js.map
+//# sourceMappingURL=index.ca4edfd9.js.map
