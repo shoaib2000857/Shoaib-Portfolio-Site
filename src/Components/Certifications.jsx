@@ -16,6 +16,7 @@ const Certifications = () => {
           margin: "3rem auto",
           textAlign: "center",
           flexWrap: "wrap",
+          wordWrap: "breakWord",
         }}
       >
         <h2 style={{ color: "black" }}>Certifications</h2>
