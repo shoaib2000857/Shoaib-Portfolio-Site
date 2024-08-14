@@ -34990,8 +34990,8 @@ const Education = ()=>{
                                 children: "Certifications"
                             }, void 0, false, {
                                 fileName: "src/Components/Education.jsx",
-                                lineNumber: 14,
-                                columnNumber: 15
+                                lineNumber: 15,
+                                columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/Components/Education.jsx",
