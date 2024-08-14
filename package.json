@@ -4,12 +4,6 @@
   "description": "Shoaib Portfolio Home Page",
   "source": "src/index.html",
   "homepage": "http://shoaib2000857.github.io/Shoaib-Portfolio-Site",
-  
-  "name": "About Page",
-  "version": "1.0.0",
-  "description": "Shoaib Portfolio Home Page",
-  "source": "src/about.html",
-  "homepage": "http://shoaib2000857.github.io/Shoaib-Portfolio-Site/about.html",
 
   "scripts": {
     "start": "parcel",
