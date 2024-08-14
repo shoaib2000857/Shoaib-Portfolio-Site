@@ -29016,7 +29016,7 @@ $RefreshReg$(_c, "Portfolio");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../images/design-desk.jpeg":"jSSP3","../images/dark-bg.jpg":"cGu1I"}],"jSSP3":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../images/design-desk.jpeg":"jSSP3","../images/dark-bg.jpg":"cGu1I","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"jSSP3":[function(require,module,exports) {
 module.exports = require("./helpers/bundle-url").getBundleURL("bLxZJ") + "design-desk.df4cd0cf.jpeg" + "?" + Date.now();
 
 },{"./helpers/bundle-url":"lgJ39"}],"cGu1I":[function(require,module,exports) {
@@ -29133,7 +29133,7 @@ $RefreshReg$(_c, "Education");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../images/edu-bg.jpg":"12epX"}],"12epX":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../images/edu-bg.jpg":"12epX","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"12epX":[function(require,module,exports) {
 module.exports = require("./helpers/bundle-url").getBundleURL("bLxZJ") + "edu-bg.69b7cf3c.jpg" + "?" + Date.now();
 
 },{"./helpers/bundle-url":"lgJ39"}],"l2sRn":[function(require,module,exports) {
@@ -29173,7 +29173,8 @@ const Certifications = ()=>{
                     padding: "4rem",
                     margin: "3rem auto",
                     textAlign: "center",
-                    flexWrap: "wrap"
+                    flexWrap: "wrap",
+                    wordWrap: "breakWord"
                 },
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
@@ -29183,7 +29184,7 @@ const Certifications = ()=>{
                         children: "Certifications"
                     }, void 0, false, {
                         fileName: "src/Components/Certifications.jsx",
-                        lineNumber: 21,
+                        lineNumber: 22,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -29205,27 +29206,27 @@ const Certifications = ()=>{
                                         children: "Harvard"
                                     }, void 0, false, {
                                         fileName: "src/Components/Certifications.jsx",
-                                        lineNumber: 31,
+                                        lineNumber: 32,
                                         columnNumber: 13
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                         children: "CS50X"
                                     }, void 0, false, {
                                         fileName: "src/Components/Certifications.jsx",
-                                        lineNumber: 32,
+                                        lineNumber: 33,
                                         columnNumber: 13
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                         children: "2024"
                                     }, void 0, false, {
                                         fileName: "src/Components/Certifications.jsx",
-                                        lineNumber: 33,
+                                        lineNumber: 34,
                                         columnNumber: 13
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/Components/Certifications.jsx",
-                                lineNumber: 30,
+                                lineNumber: 31,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -29237,29 +29238,29 @@ const Certifications = ()=>{
                                 children: [
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
                                         children: "Udemy"
-                                    }, void 0, false, {
-                                        fileName: "src/Components/Certifications.jsx",
-                                        lineNumber: 36,
-                                        columnNumber: 13
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                        children: "100 Days of Code: The Complete Python Pro Bootcamp"
                                     }, void 0, false, {
                                         fileName: "src/Components/Certifications.jsx",
                                         lineNumber: 37,
                                         columnNumber: 13
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                        children: "2024"
+                                        children: "100 Days of Code: The Complete Python Pro Bootcamp"
                                     }, void 0, false, {
                                         fileName: "src/Components/Certifications.jsx",
                                         lineNumber: 38,
+                                        columnNumber: 13
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                        children: "2024"
+                                    }, void 0, false, {
+                                        fileName: "src/Components/Certifications.jsx",
+                                        lineNumber: 39,
                                         columnNumber: 13
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/Components/Certifications.jsx",
-                                lineNumber: 35,
+                                lineNumber: 36,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -29271,29 +29272,29 @@ const Certifications = ()=>{
                                 children: [
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
                                         children: "Udemy"
-                                    }, void 0, false, {
-                                        fileName: "src/Components/Certifications.jsx",
-                                        lineNumber: 41,
-                                        columnNumber: 13
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                        children: "The Complete 2024 Web Development Bootcamp"
                                     }, void 0, false, {
                                         fileName: "src/Components/Certifications.jsx",
                                         lineNumber: 42,
                                         columnNumber: 13
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                        children: "2024"
+                                        children: "The Complete 2024 Web Development Bootcamp"
                                     }, void 0, false, {
                                         fileName: "src/Components/Certifications.jsx",
                                         lineNumber: 43,
+                                        columnNumber: 13
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                        children: "2024"
+                                    }, void 0, false, {
+                                        fileName: "src/Components/Certifications.jsx",
+                                        lineNumber: 44,
                                         columnNumber: 13
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/Components/Certifications.jsx",
-                                lineNumber: 40,
+                                lineNumber: 41,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -29305,29 +29306,29 @@ const Certifications = ()=>{
                                 children: [
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
                                         children: "Udemy"
-                                    }, void 0, false, {
-                                        fileName: "src/Components/Certifications.jsx",
-                                        lineNumber: 46,
-                                        columnNumber: 13
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                        children: "Java 17 Masterclass: Start Coding in 2024"
                                     }, void 0, false, {
                                         fileName: "src/Components/Certifications.jsx",
                                         lineNumber: 47,
                                         columnNumber: 13
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                        children: "2024"
+                                        children: "Java 17 Masterclass: Start Coding in 2024"
                                     }, void 0, false, {
                                         fileName: "src/Components/Certifications.jsx",
                                         lineNumber: 48,
+                                        columnNumber: 13
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                        children: "2024"
+                                    }, void 0, false, {
+                                        fileName: "src/Components/Certifications.jsx",
+                                        lineNumber: 49,
                                         columnNumber: 13
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/Components/Certifications.jsx",
-                                lineNumber: 45,
+                                lineNumber: 46,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -29341,33 +29342,33 @@ const Certifications = ()=>{
                                         children: "Udemy"
                                     }, void 0, false, {
                                         fileName: "src/Components/Certifications.jsx",
-                                        lineNumber: 51,
+                                        lineNumber: 52,
                                         columnNumber: 13
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                         children: "Beginning C++ Programming - From Beginner to Beyond"
                                     }, void 0, false, {
                                         fileName: "src/Components/Certifications.jsx",
-                                        lineNumber: 52,
+                                        lineNumber: 53,
                                         columnNumber: 13
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                         children: "2024"
                                     }, void 0, false, {
                                         fileName: "src/Components/Certifications.jsx",
-                                        lineNumber: 53,
+                                        lineNumber: 54,
                                         columnNumber: 13
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/Components/Certifications.jsx",
-                                lineNumber: 50,
+                                lineNumber: 51,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/Components/Certifications.jsx",
-                        lineNumber: 22,
+                        lineNumber: 23,
                         columnNumber: 9
                     }, undefined)
                 ]
@@ -29393,7 +29394,7 @@ $RefreshReg$(_c, "Certifications");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../images/light-bg.jpg":"keirR"}],"keirR":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../images/light-bg.jpg":"keirR","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"keirR":[function(require,module,exports) {
 module.exports = require("./helpers/bundle-url").getBundleURL("bLxZJ") + "light-bg.d080fe13.jpg" + "?" + Date.now();
 
 },{"./helpers/bundle-url":"lgJ39"}],"lW6qc":[function() {},{}]},["1xC6H","ShInH","8lqZg"], "8lqZg", "parcelRequiref11c")
