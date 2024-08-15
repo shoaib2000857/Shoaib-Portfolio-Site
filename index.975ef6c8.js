@@ -28874,6 +28874,7 @@ const imageAltText = "desktop with books and laptop";
     }, 
 ];
 const Portfolio = ()=>{
+    const isMobile = window.innerWidth <= 600;
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
         className: "padding",
         id: "portfolio",
@@ -28884,14 +28885,14 @@ const Portfolio = ()=>{
                 alt: imageAltText
             }, void 0, false, {
                 fileName: "src/Components/Portfolio.jsx",
-                lineNumber: 68,
+                lineNumber: 70,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 style: {
-                    width: "80%",
+                    width: "90%",
                     padding: "4rem",
-                    margin: "3rem auto",
+                    margin: isMobile ? "1rem auto" : "2rem auto",
                     textAlign: "center",
                     flexWrap: "wrap"
                 },
@@ -28903,7 +28904,7 @@ const Portfolio = ()=>{
                         children: "Portfolio"
                     }, void 0, false, {
                         fileName: "src/Components/Portfolio.jsx",
-                        lineNumber: 79,
+                        lineNumber: 80,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
@@ -28915,11 +28916,12 @@ const Portfolio = ()=>{
                         }
                     }, void 0, false, {
                         fileName: "src/Components/Portfolio.jsx",
-                        lineNumber: 81,
+                        lineNumber: 82,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         style: {
+                            width: "90%",
                             display: "flex",
                             flexDirection: "row",
                             paddingTop: "3rem",
@@ -28934,7 +28936,7 @@ const Portfolio = ()=>{
                                 }
                             }, void 0, false, {
                                 fileName: "src/Components/Portfolio.jsx",
-                                lineNumber: 91,
+                                lineNumber: 92,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28942,7 +28944,8 @@ const Portfolio = ()=>{
                                 style: {
                                     display: "grid",
                                     gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-                                    gap: "1rem"
+                                    gap: "1rem",
+                                    overflowWrap: "break-word"
                                 },
                                 children: projectList.map((project)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                         className: "box",
@@ -28961,12 +28964,12 @@ const Portfolio = ()=>{
                                                     children: project.title
                                                 }, void 0, false, {
                                                     fileName: "src/Components/Portfolio.jsx",
-                                                    lineNumber: 103,
+                                                    lineNumber: 105,
                                                     columnNumber: 19
                                                 }, undefined)
                                             }, void 0, false, {
                                                 fileName: "src/Components/Portfolio.jsx",
-                                                lineNumber: 102,
+                                                lineNumber: 104,
                                                 columnNumber: 17
                                             }, undefined),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -28974,36 +28977,36 @@ const Portfolio = ()=>{
                                                 children: project.description
                                             }, void 0, false, {
                                                 fileName: "src/Components/Portfolio.jsx",
-                                                lineNumber: 105,
+                                                lineNumber: 107,
                                                 columnNumber: 17
                                             }, undefined)
                                         ]
                                     }, project.title, true, {
                                         fileName: "src/Components/Portfolio.jsx",
-                                        lineNumber: 101,
+                                        lineNumber: 103,
                                         columnNumber: 15
                                     }, undefined))
                             }, void 0, false, {
                                 fileName: "src/Components/Portfolio.jsx",
-                                lineNumber: 92,
+                                lineNumber: 93,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/Components/Portfolio.jsx",
-                        lineNumber: 88,
+                        lineNumber: 89,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/Components/Portfolio.jsx",
-                lineNumber: 69,
+                lineNumber: 71,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/Components/Portfolio.jsx",
-        lineNumber: 67,
+        lineNumber: 69,
         columnNumber: 5
     }, undefined);
 };
@@ -29187,6 +29190,7 @@ const certificationsList = [
     }, 
 ];
 const Certifications = ()=>{
+    const isMobile = window.innerWidth <= 600;
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
         className: "padding",
         id: "Certifications",
@@ -29197,14 +29201,14 @@ const Certifications = ()=>{
                 alt: imageAltText
             }, void 0, false, {
                 fileName: "src/Components/Certifications.jsx",
-                lineNumber: 49,
+                lineNumber: 50,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 style: {
-                    width: "80%",
-                    padding: "4rem",
-                    margin: "3rem auto",
+                    width: "90%",
+                    padding: "1rem",
+                    margin: isMobile ? "1rem auto" : "2rem auto",
                     textAlign: "center",
                     flexWrap: "wrap"
                 },
@@ -29217,7 +29221,7 @@ const Certifications = ()=>{
                         children: "Certifications"
                     }, void 0, false, {
                         fileName: "src/Components/Certifications.jsx",
-                        lineNumber: 59,
+                        lineNumber: 60,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -29236,7 +29240,7 @@ const Certifications = ()=>{
                                 }
                             }, void 0, false, {
                                 fileName: "src/Components/Certifications.jsx",
-                                lineNumber: 64,
+                                lineNumber: 65,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -29244,7 +29248,8 @@ const Certifications = ()=>{
                                 style: {
                                     display: "grid",
                                     gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-                                    gap: "1rem"
+                                    gap: "1rem",
+                                    overflowWrap: "break-word"
                                 },
                                 children: certificationsList.map((certification)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                         className: "box",
@@ -29263,12 +29268,12 @@ const Certifications = ()=>{
                                                     children: certification.title
                                                 }, void 0, false, {
                                                     fileName: "src/Components/Certifications.jsx",
-                                                    lineNumber: 76,
+                                                    lineNumber: 78,
                                                     columnNumber: 19
                                                 }, undefined)
                                             }, void 0, false, {
                                                 fileName: "src/Components/Certifications.jsx",
-                                                lineNumber: 75,
+                                                lineNumber: 77,
                                                 columnNumber: 17
                                             }, undefined),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -29276,36 +29281,36 @@ const Certifications = ()=>{
                                                 children: certification.description
                                             }, void 0, false, {
                                                 fileName: "src/Components/Certifications.jsx",
-                                                lineNumber: 78,
+                                                lineNumber: 80,
                                                 columnNumber: 17
                                             }, undefined)
                                         ]
                                     }, certification.title, true, {
                                         fileName: "src/Components/Certifications.jsx",
-                                        lineNumber: 74,
+                                        lineNumber: 76,
                                         columnNumber: 15
                                     }, undefined))
                             }, void 0, false, {
                                 fileName: "src/Components/Certifications.jsx",
-                                lineNumber: 65,
+                                lineNumber: 66,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/Components/Certifications.jsx",
-                        lineNumber: 61,
+                        lineNumber: 62,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/Components/Certifications.jsx",
-                lineNumber: 50,
+                lineNumber: 51,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/Components/Certifications.jsx",
-        lineNumber: 48,
+        lineNumber: 49,
         columnNumber: 5
     }, undefined);
 };
