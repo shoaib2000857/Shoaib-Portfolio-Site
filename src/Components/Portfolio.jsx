@@ -76,7 +76,7 @@ const Portfolio = () => {
           flexWrap: "wrap",
         }}
       >
-        <h2 style={{ textAlign: "center", color: "black" }}>Portfolio</h2>
+        <h2 style={{ textAlign: "center",}}>Portfolio</h2>
 
         <img
           src={image}
