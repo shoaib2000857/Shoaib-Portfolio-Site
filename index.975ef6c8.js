@@ -28891,7 +28891,7 @@ const Portfolio = ()=>{
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 style: {
                     width: "90%",
-                    padding: "4rem",
+                    padding: "1rem",
                     margin: isMobile ? "1rem auto" : "2rem auto",
                     textAlign: "center",
                     flexWrap: "wrap"
@@ -28921,7 +28921,6 @@ const Portfolio = ()=>{
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         style: {
-                            width: "90%",
                             display: "flex",
                             flexDirection: "row",
                             paddingTop: "3rem",
