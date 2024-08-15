@@ -28898,8 +28898,7 @@ const Portfolio = ()=>{
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                         style: {
-                            textAlign: "center",
-                            color: "black"
+                            textAlign: "center"
                         },
                         children: "Portfolio"
                     }, void 0, false, {
