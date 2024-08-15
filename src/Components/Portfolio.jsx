@@ -68,7 +68,7 @@ const Portfolio = () => {
       <img className="background" src={bg} alt={imageAltText} />
       <div
         style={{
-          backgroundColor: "white",
+          
           width: "80%",
           padding: "4rem",
           margin: "3rem auto",
@@ -98,7 +98,7 @@ const Portfolio = () => {
             }}
           >
             {projectList.map((project) => (
-              <div className="box" key={project.title}>
+              <div className="box" key={project.title} style={{ backgroundColor: "white" }}>
                 <a href={project.url} target="_blank" rel="noopener noreferrer">
                   <h3 style={{ flexBasis: "40px" }}>{project.title}</h3>
                 </a>

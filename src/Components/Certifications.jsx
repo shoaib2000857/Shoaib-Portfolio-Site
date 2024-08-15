@@ -4,54 +4,80 @@ import React from "react";
 import image from "../images/light-bg.jpg";
 const imageAltText = "purple and blue abstract background";
 
+// const image2 = "../images/woman-with-tabet.jpg";
+
+const certificationsList = [
+  {
+    title: "CS50X (in progress) ",
+    description:
+      "Harvard's Introduction to Computer Science course. Topics include algorithms, data structures, and programming languages.",
+    //image: image2,
+    url: "https://cs50.harvard.edu/x/2021/",
+  },
+  {
+    title: "Udemy 100 Days of Code: The Complete Python Pro Bootcamp (in progress) ",
+    description: "Course that covers Python programming, data science, web development, and more.",
+    // image: image2,
+    url: "https://www.udemy.com/course/100-days-of-code/",
+  },
+  {
+    title: "Udemy The Complete 2024 Web Development Bootcamp (in progress) ",
+    description:
+      "A comprehensive web development course that covers HTML, CSS, JavaScript, Node.js, and more.",
+    // image: image2,
+    url: "https://www.udemy.com/course/the-complete-web-development-bootcamp/",
+  },
+  {
+    title: "Udemy Java 17 Masterclass: Start Coding in 2024 (in progress) ",
+    description:
+      "A comprehensive Java course that covers object-oriented programming, data structures, and more.",
+    // image: image2,
+    url: "https://www.udemy.com/course/java-the-complete-java-developer-course/",
+  },
+  {
+    title: "Udemy Beginning C++ Programming - From Beginner to Beyond (in progress) ",
+    description:
+      "A comprehensive C++ course that covers object-oriented programming, data structures, and more.",
+    // image: image2,
+    url: "https://www.udemy.com/course/beginning-c-plus-plus-programming/",
+  },
+];
+
 const Certifications = () => {
   return (
     <section className="padding" id="Certifications">
       <img className="background" src={image} alt={imageAltText} />
-      <div 
+      <div
         style={{
-          backgroundColor: "white",
           width: "80%",
           padding: "4rem",
           margin: "3rem auto",
           textAlign: "center",
           flexWrap: "wrap",
-          wordWrap: "breakWord",
         }}
       >
-        <h2 style={{ color: "black" }}>Certifications</h2>
+        <h2 style={{ textAlign: "center", color: "black" }}>Certifications</h2>
+
         <div
-          className="container"
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(600px, 1fr))",
-            gap: "1rem",
-          }}
+          style={{ display: "flex", flexDirection: "row", paddingTop: "3rem", flexWrap: "wrap" }}
         >
-          <div style={{ flexWrap: "wrap", margin: "1em", marginTop: "3em" }}>
-            <h3>Harvard</h3>
-            <p>CS50X</p>
-            <p>2024</p>
-          </div>
-          <div style={{ flexWrap: "wrap", margin: "1em", marginTop: "3em" }}>
-            <h3>Udemy</h3>
-            <p>100 Days of Code: The Complete Python Pro Bootcamp</p>
-            <p>2024</p>
-          </div>
-          <div style={{ flexWrap: "wrap", margin: "1em", marginTop: "3em" }}>
-            <h3>Udemy</h3>
-            <p>The Complete 2024 Web Development Bootcamp</p>
-            <p>2024</p>
-          </div>
-          <div style={{ flexWrap: "wrap", margin: "1em", marginTop: "3em" }}>
-            <h3>Udemy</h3>
-            <p>Java 17 Masterclass: Start Coding in 2024</p>
-            <p>2024</p>
-          </div>
-          <div style={{ flexWrap: "wrap", margin: "1em", marginTop: "3em" }}>
-            <h3>Udemy</h3>
-            <p>Beginning C++ Programming - From Beginner to Beyond</p>
-            <p>2024</p>
+          <div style={{ maxWidth: "100%", alignSelf: "center", flexWrap: "wrap" }}></div>
+          <div
+            className="container"
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+              gap: "1rem",
+            }}
+          >
+            {certificationsList.map((certification) => (
+              <div className="box" key={certification.title} style={{ backgroundColor: "white" }}>
+                <a href={certification.url} target="_blank" rel="noopener noreferrer">
+                  <h3 style={{ flexBasis: "40px" }}>{certification.title}</h3>
+                </a>
+                <p className="small">{certification.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
@@ -60,3 +86,7 @@ const Certifications = () => {
 };
 
 export default Certifications;
+
+{
+  /* <img src={certification.image} alt={certification.title} style={{ width: "50%", height: "80%", margin: "0 auto" }} /> */
+}
