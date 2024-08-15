@@ -44,14 +44,15 @@ const certificationsList = [
 ];
 
 const Certifications = () => {
+  const isMobile = window.innerWidth <= 600;
   return (
     <section className="padding" id="Certifications">
       <img className="background" src={image} alt={imageAltText} />
       <div
         style={{
-          width: "80%",
-          padding: "4rem",
-          margin: "3rem auto",
+          width: "90%",
+          padding: "1rem",
+          margin: isMobile ? "1rem auto" : "2rem auto", // Adjust margin for mobile and desktop
           textAlign: "center",
           flexWrap: "wrap",
         }}
@@ -68,6 +69,7 @@ const Certifications = () => {
               display: "grid",
               gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
               gap: "1rem",
+              overflowWrap: "break-word",
             }}
           >
             {certificationsList.map((certification) => (

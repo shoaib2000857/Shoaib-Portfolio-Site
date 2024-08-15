@@ -63,15 +63,16 @@ const projectList = [
 ];
 
 const Portfolio = () => {
+  const isMobile = window.innerWidth <= 600;
+
   return (
     <section className="padding" id="portfolio">
       <img className="background" src={bg} alt={imageAltText} />
       <div
         style={{
-          
-          width: "80%",
+          width: "90%",
           padding: "4rem",
-          margin: "3rem auto",
+          margin: isMobile ? "1rem auto" : "2rem auto", // Adjust margin for mobile and desktop
           textAlign: "center",
           flexWrap: "wrap",
         }}
@@ -86,7 +87,7 @@ const Portfolio = () => {
             height: "30%",}}
         />
         <div
-          style={{ display: "flex", flexDirection: "row", paddingTop: "3rem", flexWrap: "wrap" }}
+          style={{ width: "90%", display: "flex", flexDirection: "row", paddingTop: "3rem", flexWrap: "wrap" }}
         >
           <div style={{ maxWidth: "100%", alignSelf: "center", flexWrap: "wrap" }}></div>
           <div
@@ -95,6 +96,7 @@ const Portfolio = () => {
               display: "grid",
               gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
               gap: "1rem",
+              overflowWrap: "break-word",
             }}
           >
             {projectList.map((project) => (
