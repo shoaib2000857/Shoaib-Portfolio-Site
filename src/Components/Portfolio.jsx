@@ -71,7 +71,7 @@ const Portfolio = () => {
       <div
         style={{
           width: "90%",
-          padding: "4rem",
+          padding: "1rem",
           margin: isMobile ? "1rem auto" : "2rem auto", // Adjust margin for mobile and desktop
           textAlign: "center",
           flexWrap: "wrap",
@@ -87,7 +87,7 @@ const Portfolio = () => {
             height: "30%",}}
         />
         <div
-          style={{ width: "90%", display: "flex", flexDirection: "row", paddingTop: "3rem", flexWrap: "wrap" }}
+          style={{ display: "flex", flexDirection: "row", paddingTop: "3rem", flexWrap: "wrap" }}
         >
           <div style={{ maxWidth: "100%", alignSelf: "center", flexWrap: "wrap" }}></div>
           <div
