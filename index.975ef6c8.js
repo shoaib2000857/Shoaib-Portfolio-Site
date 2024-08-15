@@ -29153,38 +29153,37 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _lightBgJpg = require("../images/light-bg.jpg");
 var _lightBgJpgDefault = parcelHelpers.interopDefault(_lightBgJpg);
-var _womanWithTabletJpg = require("../images/woman-with-tablet.jpg");
-var _womanWithTabletJpgDefault = parcelHelpers.interopDefault(_womanWithTabletJpg);
 const imageAltText = "purple and blue abstract background";
+// const image2 = "../images/woman-with-tabet.jpg";
 const certificationsList = [
     {
         title: "CS50X (in progress) ",
         description: "Harvard's Introduction to Computer Science course. Topics include algorithms, data structures, and programming languages.",
-        image: (0, _womanWithTabletJpgDefault.default),
+        //image: image2,
         url: "https://cs50.harvard.edu/x/2021/"
     },
     {
         title: "Udemy 100 Days of Code: The Complete Python Pro Bootcamp (in progress) ",
         description: "Course that covers Python programming, data science, web development, and more.",
-        image: (0, _womanWithTabletJpgDefault.default),
+        // image: image2,
         url: "https://www.udemy.com/course/100-days-of-code/"
     },
     {
         title: "Udemy The Complete 2024 Web Development Bootcamp (in progress) ",
         description: "A comprehensive web development course that covers HTML, CSS, JavaScript, Node.js, and more.",
-        image: (0, _womanWithTabletJpgDefault.default),
+        // image: image2,
         url: "https://www.udemy.com/course/the-complete-web-development-bootcamp/"
     },
     {
         title: "Udemy Java 17 Masterclass: Start Coding in 2024 (in progress) ",
         description: "A comprehensive Java course that covers object-oriented programming, data structures, and more.",
-        image: (0, _womanWithTabletJpgDefault.default),
+        // image: image2,
         url: "https://www.udemy.com/course/java-the-complete-java-developer-course/"
     },
     {
         title: "Udemy Beginning C++ Programming - From Beginner to Beyond (in progress) ",
         description: "A comprehensive C++ course that covers object-oriented programming, data structures, and more.",
-        image: (0, _womanWithTabletJpgDefault.default),
+        // image: image2,
         url: "https://www.udemy.com/course/beginning-c-plus-plus-programming/"
     }, 
 ];
@@ -29219,7 +29218,7 @@ const Certifications = ()=>{
                         children: "Certifications"
                     }, void 0, false, {
                         fileName: "src/Components/Certifications.jsx",
-                        lineNumber: 60,
+                        lineNumber: 59,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -29238,7 +29237,7 @@ const Certifications = ()=>{
                                 }
                             }, void 0, false, {
                                 fileName: "src/Components/Certifications.jsx",
-                                lineNumber: 65,
+                                lineNumber: 64,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -29265,12 +29264,12 @@ const Certifications = ()=>{
                                                     children: certification.title
                                                 }, void 0, false, {
                                                     fileName: "src/Components/Certifications.jsx",
-                                                    lineNumber: 77,
+                                                    lineNumber: 76,
                                                     columnNumber: 19
                                                 }, undefined)
                                             }, void 0, false, {
                                                 fileName: "src/Components/Certifications.jsx",
-                                                lineNumber: 76,
+                                                lineNumber: 75,
                                                 columnNumber: 17
                                             }, undefined),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -29278,24 +29277,24 @@ const Certifications = ()=>{
                                                 children: certification.description
                                             }, void 0, false, {
                                                 fileName: "src/Components/Certifications.jsx",
-                                                lineNumber: 79,
+                                                lineNumber: 78,
                                                 columnNumber: 17
                                             }, undefined)
                                         ]
                                     }, certification.title, true, {
                                         fileName: "src/Components/Certifications.jsx",
-                                        lineNumber: 75,
+                                        lineNumber: 74,
                                         columnNumber: 15
                                     }, undefined))
                             }, void 0, false, {
                                 fileName: "src/Components/Certifications.jsx",
-                                lineNumber: 66,
+                                lineNumber: 65,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/Components/Certifications.jsx",
-                        lineNumber: 62,
+                        lineNumber: 61,
                         columnNumber: 9
                     }, undefined)
                 ]
@@ -29321,11 +29320,8 @@ $RefreshReg$(_c, "Certifications");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../images/light-bg.jpg":"keirR","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../images/woman-with-tablet.jpg":"bEltf"}],"keirR":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../images/light-bg.jpg":"keirR","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"keirR":[function(require,module,exports) {
 module.exports = require("./helpers/bundle-url").getBundleURL("bLxZJ") + "light-bg.d080fe13.jpg" + "?" + Date.now();
-
-},{"./helpers/bundle-url":"lgJ39"}],"bEltf":[function(require,module,exports) {
-module.exports = require("./helpers/bundle-url").getBundleURL("bLxZJ") + "woman-with-tablet.b3bf1156.jpg" + "?" + Date.now();
 
 },{"./helpers/bundle-url":"lgJ39"}],"lW6qc":[function() {},{}]},["1xC6H","ShInH","8lqZg"], "8lqZg", "parcelRequiref11c")
 
