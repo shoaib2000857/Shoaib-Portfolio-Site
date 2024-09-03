@@ -27099,7 +27099,7 @@ var _stylesCss = require("./styles.css");
     linkedIn: "shoaib-sadiq-salehmohamed-a77812318",
     medium: "",
     twitter: "",
-    youTube: ""
+    youTube: "shoaibsadiq2238"
 };
 const primaryColor = "#4E567E";
 const secondaryColor = "#D2F1E4";
