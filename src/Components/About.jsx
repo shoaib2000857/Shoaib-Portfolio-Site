@@ -24,7 +24,7 @@ const imageAltText = "purple and blue abstract background";
  * Short description that expands on your title on the Home component.
  */
 const description =
-  "I'm persuing an online BS in Data Science student studying at Indian Institute of Technology Madras.";
+  "I'm am a computer science enthusiast persuing an online BS in Data Science from Indian Institute of Technology Madras along with a Bachelors in Technology in Computer Science and Technology from Keshav Memorial institution Hyderabad.";
 
 /**
  * List of some of skills or technologies you work on, are learning,

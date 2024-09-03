@@ -30,11 +30,11 @@ const siteProps = {
   title: "Data Science and Programing Student",
   email: "shoaibkulsums@gmail.com",
   gitHub: "ShoaibSM7",
-  instagram:"Shoaib_SSM",
+  instagram: "Shoaib_SSM",
   linkedIn: "shoaib-sadiq-salehmohamed-a77812318",
   medium: "",
   twitter: "",
-  youTube: "",
+  youTube: "shoaibsadiq2238",
 };
 
 const primaryColor = "#4E567E";
