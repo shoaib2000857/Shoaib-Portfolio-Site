@@ -1,41 +1,43 @@
-<!-- BEGIN MICROSOFT SECURITY.MD V0.0.7 BLOCK -->
+# Security Policy
 
-## Security
+## Supported Versions
 
-Microsoft takes the security of our software products and services seriously, which includes all source code repositories managed through our GitHub organizations, which include [Microsoft](https://github.com/Microsoft), [Azure](https://github.com/Azure), [DotNet](https://github.com/dotnet), [AspNet](https://github.com/aspnet), [Xamarin](https://github.com/xamarin), and [our GitHub organizations](https://opensource.microsoft.com/).
+The following versions of the project are currently supported for security updates:
 
-If you believe you have found a security vulnerability in any Microsoft-owned repository that meets [Microsoft's definition of a security vulnerability](https://aka.ms/opensource/security/definition), please report it to us as described below.
+| Version | Supported          |
+| ------- | ------------------ |
+| 1.x     | :white_check_mark:  |
+| < 1.x   | :x:                |
 
-## Reporting Security Issues
+## Reporting a Vulnerability
 
-**Please do not report security vulnerabilities through public GitHub issues.**
+If you discover a security vulnerability in this project, please follow the steps below to report it:
 
-Instead, please report them to the Microsoft Security Response Center (MSRC) at [https://msrc.microsoft.com/create-report](https://aka.ms/opensource/security/create-report).
+1. **Do not disclose publicly**: Do not publicly disclose the vulnerability until it has been addressed.
+2. **Contact the maintainer directly**: Report the issue by emailing us at [shoaibkulsums@gmail.com](mailto:shoaibkulsums@gmail.com) with the following details:
+    - A detailed description of the vulnerability.
+    - Steps to reproduce the issue, if applicable.
+    - Any possible mitigations you’ve identified.
+    - The severity level of the issue (Low, Medium, High, Critical).
 
-If you prefer to submit without logging in, send email to [secure@microsoft.com](mailto:secure@microsoft.com).  If possible, encrypt your message with our PGP key; please download it from the [Microsoft Security Response Center PGP Key page](https://aka.ms/opensource/security/pgpkey).
+3. **Expected response time**: We will acknowledge receipt of your report within 48 hours and provide you with an estimated time to address the issue, typically within 7 days. We may ask for additional details or clarification during the investigation process.
 
-You should receive a response within 24 hours. If for some reason you do not, please follow up via email to ensure we received your original message. Additional information can be found at [microsoft.com/msrc](https://aka.ms/opensource/security/msrc). 
+## Security Update Process
 
-Please include the requested information listed below (as much as you can provide) to help us better understand the nature and scope of the possible issue:
+When a security vulnerability is confirmed:
 
-  * Type of issue (e.g. buffer overflow, SQL injection, cross-site scripting, etc.)
-  * Full paths of source file(s) related to the manifestation of the issue
-  * The location of the affected source code (tag/branch/commit or direct URL)
-  * Any special configuration required to reproduce the issue
-  * Step-by-step instructions to reproduce the issue
-  * Proof-of-concept or exploit code (if possible)
-  * Impact of the issue, including how an attacker might exploit the issue
+- We will provide a patch as soon as possible and notify users of the update.
+- A security advisory will be published to inform users of the nature of the vulnerability, the versions affected, and any recommended actions.
 
-This information will help us triage your report more quickly.
+## Best Practices for Users
 
-If you are reporting for a bug bounty, more complete reports can contribute to a higher bounty award. Please visit our [Microsoft Bug Bounty Program](https://aka.ms/opensource/security/bounty) page for more details about our active programs.
+To ensure the security of your environment while using this project, consider following these guidelines:
 
-## Preferred Languages
+- **Keep your software up to date**: Always run the latest version of the project to receive the most recent security patches.
+- **Use strong passwords**: If applicable, ensure any services or interfaces exposed by the project are protected with strong passwords or authentication mechanisms.
+- **Regularly audit dependencies**: Regularly check for vulnerabilities in third-party libraries or dependencies used by this project.
+- **Limit access**: Ensure the project is not unnecessarily exposed to the public or unauthorized users. Use proper access control mechanisms to restrict who can interact with the project.
 
-We prefer all communications to be in English.
+## Acknowledgment
 
-## Policy
-
-Microsoft follows the principle of [Coordinated Vulnerability Disclosure](https://aka.ms/opensource/security/cvd).
-
-<!-- END MICROSOFT SECURITY.MD BLOCK -->
+We appreciate the responsible disclosure of any vulnerabilities. Your contributions help us improve the security and stability of the project.
