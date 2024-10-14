@@ -56,9 +56,14 @@ const projectList = [
     url: "https://www.youtube.com/watch?v=c3hHhRME_XI",
   },
   {
-    title: "My CS50 Project",
-    description: "My Project",
+    title: "Task Master - My CS50X Project",
+    description: "My CS50X Project Task Master Which is a all in one task manager and timetable app",
     url: "https://cs50project.shoaibssm.me",
+  },
+  {
+    title: "Purr-fessor",
+    description: "Purr-fessor the ultimare AI-powered teaching assistant chatbot designed to make learning both fun and engaging. With an adorable feline personality, Purr-fessor brings a playful and charming twist to education, offering academic support, study tips, and constant encouragement — all with a dash of cat-inspired charisma! 🐱📚",
+    url: "https://ai-study-assistant.vercel.app/",
   },
 ];
 
