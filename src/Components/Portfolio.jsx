@@ -60,6 +60,26 @@ const projectList = [
     description: "My Project",
     url: "https://cs50project.shoaibssm.me",
   },
+  {
+    title: "100-days-of-code",
+    description: "The Projects made during 100 days of code",
+    url: "https://codecase.shoaibssm.me",
+  },
+  {
+    title: "Purr-fessor",
+    description: "Project made got the google GEN AI hackathon",
+    url: "https://ai-study-assistant.vercel.app/",
+  },
+  {
+    title: "Elyon The Guide",
+    description: "Project Made for the Bandipur House CTC Hackathon",
+    url: "https://cs50project.shoaibssm.me",
+  },
+  {
+    title: "Maargdarshak",
+    description: "Project Made for Codeinovate Hackathon",
+    url: "https://maargdarshak.shoaibssm.me",
+  },
 ];
 
 const Portfolio = () => {
@@ -99,7 +119,7 @@ const Portfolio = () => {
               overflowWrap: "break-word",
             }}
           >
-            {projectList.map((project) => (
+          {projectList.map((project) => (
               <div className="box" key={project.title} style={{ backgroundColor: "white" }}>
                 <a href={project.url} target="_blank" rel="noopener noreferrer">
                   <h3 style={{ flexBasis: "40px" }}>{project.title}</h3>
