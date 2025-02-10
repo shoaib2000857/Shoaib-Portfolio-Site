@@ -56,14 +56,9 @@ const projectList = [
     url: "https://www.youtube.com/watch?v=c3hHhRME_XI",
   },
   {
-    title: "My CS50 Project",
-    description: "My Project",
+    title: "Task Master - My CS50X Project",
+    description: "My CS50X Project Task Master Which is a all in one task manager and timetable app",
     url: "https://cs50project.shoaibssm.me",
-  },
-  {
-    title: "100-days-of-code",
-    description: "The Projects made during 100 days of code",
-    url: "https://codecase.shoaibssm.me",
   },
   {
     title: "Purr-fessor",
