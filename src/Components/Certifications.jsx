@@ -8,11 +8,11 @@ const imageAltText = "purple and blue abstract background";
 
 const certificationsList = [
   {
-    title: "CS50X (in progress) ",
+    title: "CS50X",
     description:
       "Harvard's Introduction to Computer Science course. Topics include algorithms, data structures, and programming languages.",
     //image: image2,
-    url: "https://cs50.harvard.edu/x/2021/",
+    url: "https://cs50.harvard.edu/certificates/16aea33a-336d-44bd-a0cb-3cd77b3b0e8f.png?size=letter",
   },
   {
     title: "Udemy 100 Days of Code: The Complete Python Pro Bootcamp (in progress) ",
