@@ -68,7 +68,7 @@ const projectList = [
   {
     title: "Elyon The Guide",
     description: "Project Made for the Bandipur House CTC Hackathon",
-    url: "https://cs50project.shoaibssm.me",
+    url: "https://elyon.shoaibssm.me",
   },
   {
     title: "Maargdarshak",
