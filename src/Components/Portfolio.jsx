@@ -74,6 +74,10 @@ const projectList = [
     title: "Maargdarshak",
     description: "Project Made for Codeinovate Hackathon",
     url: "https://maargdarshak.shoaibssm.me",
+  },{
+    title: "Rakshak",
+    description: "An Autonomus Security Rover Designed for surveilence and intruder detection",
+    url: "https://rakshak.shoaibssm.me",
   },
 ];
 
