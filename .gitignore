@@ -5,6 +5,21 @@ logs
 # Build files generated from Parcel
 dist
 
+# Next.js build output
+.next/
+out/
+
+# Next.js/TypeScript
+.next/**
+next-env.d.ts
+*.tsbuildinfo
+
+# Tailwind/JIT cache
+.tailwind-cache/
+
+# Vercel
+.vercel/
+
 # Dependency directories
 node_modules/
 
@@ -22,3 +37,8 @@ node_modules/
 .parcel-cache
 
 .DS_Store
+
+# local env files
+.env.local
+.env.production
+.env.development
