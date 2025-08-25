@@ -4,8 +4,8 @@ import { ThemeToggle } from "../components/ThemeToggle";
 const CONTACT = {
   name: "Shoaib Sadiq Salehmohamed",
   email: "shoaibkulsums@gmail.com",
-  gitHub: "ShoaibSM7",
-  linkedIn: "shoaib-sadiq-salehmohamed-a77812318",
+  gitHub: "Shoaib2000857",
+  linkedIn: "shoaib-ssm",
   youTube: "shoaibsadiq2238",
 };
 
@@ -14,7 +14,7 @@ const socials: Social[] = [
   { label: "Email", href: `mailto:${CONTACT.email}` },
   { label: "GitHub", href: `https://github.com/${CONTACT.gitHub}` },
   { label: "LinkedIn", href: `https://www.linkedin.com/in/${CONTACT.linkedIn}` },
-  { label: "YouTube", href: `https://www.youtube.com/c/${CONTACT.youTube}` },
+  { label: "YouTube", href: `https://www.youtube.com/@${CONTACT.youTube}` },
 ];
 
 export function Footer() {

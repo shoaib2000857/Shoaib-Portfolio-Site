@@ -29,7 +29,7 @@ const siteProps = {
   name: "Shoaib Sadiq Salehmohamed",
   title: "Data Science and Programing Student",
   email: "shoaibkulsums@gmail.com",
-  gitHub: "ShoaibSM7",
+  gitHub: "Shoaib2000857",
   instagram: "",
   linkedIn: "shoaib-sadiq-salehmohamed-a77812318",
   medium: "",
