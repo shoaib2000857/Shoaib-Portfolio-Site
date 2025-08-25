@@ -1,8 +1,8 @@
 {
   "root": true,
-  "extends": ["next/core-web-vitals", "prettier"],
+  "extends": ["next/core-web-vitals", "plugin:prettier/recommended"],
+  "plugins": ["prettier"],
   "rules": {
-    // Keep Prettier as warnings to not block builds
     "prettier/prettier": ["warn", { "endOfLine": "auto" }]
   }
 }
