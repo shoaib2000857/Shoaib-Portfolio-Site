@@ -6,7 +6,7 @@ The following versions of the project are currently supported for security updat
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 1.x     | :white_check_mark:  |
+| 1.x     | :white_check_mark: |
 | < 1.x   | :x:                |
 
 ## Reporting a Vulnerability
@@ -15,10 +15,10 @@ If you discover a security vulnerability in this project, please follow the step
 
 1. **Do not disclose publicly**: Do not publicly disclose the vulnerability until it has been addressed.
 2. **Contact the maintainer directly**: Report the issue by emailing us at [shoaibkulsums@gmail.com](mailto:shoaibkulsums@gmail.com) with the following details:
-    - A detailed description of the vulnerability.
-    - Steps to reproduce the issue, if applicable.
-    - Any possible mitigations you’ve identified.
-    - The severity level of the issue (Low, Medium, High, Critical).
+   - A detailed description of the vulnerability.
+   - Steps to reproduce the issue, if applicable.
+   - Any possible mitigations you’ve identified.
+   - The severity level of the issue (Low, Medium, High, Critical).
 
 3. **Expected response time**: We will acknowledge receipt of your report within 48 hours and provide you with an estimated time to address the issue, typically within 7 days. We may ask for additional details or clarification during the investigation process.
 

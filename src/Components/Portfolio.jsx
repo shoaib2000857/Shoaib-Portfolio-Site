@@ -57,7 +57,8 @@ const projectList = [
   },
   {
     title: "Task Master - My CS50X Project",
-    description: "My CS50X Project Task Master Which is a all in one task manager and timetable app",
+    description:
+      "My CS50X Project Task Master Which is a all in one task manager and timetable app",
     url: "https://cs50project.shoaibssm.me",
   },
   {
@@ -74,7 +75,8 @@ const projectList = [
     title: "Maargdarshak",
     description: "Project Made for Codeinovate Hackathon",
     url: "https://maargdarshak.shoaibssm.me",
-  },{
+  },
+  {
     title: "Rakshak",
     description: "An Autonomus Security Rover Designed for surveilence and intruder detection",
     url: "https://rakshak.shoaibssm.me",
@@ -96,14 +98,15 @@ const Portfolio = () => {
           flexWrap: "wrap",
         }}
       >
-        <h2 style={{ textAlign: "center",}}>Portfolio</h2>
+        <h2 style={{ textAlign: "center" }}>Portfolio</h2>
 
         <img
           src={image}
           alt={imageAltText}
           style={{
             width: "70%",
-            height: "30%",}}
+            height: "30%",
+          }}
         />
         <div
           style={{ display: "flex", flexDirection: "row", paddingTop: "3rem", flexWrap: "wrap" }}
@@ -118,7 +121,7 @@ const Portfolio = () => {
               overflowWrap: "break-word",
             }}
           >
-          {projectList.map((project) => (
+            {projectList.map((project) => (
               <div className="box" key={project.title} style={{ backgroundColor: "white" }}>
                 <a href={project.url} target="_blank" rel="noopener noreferrer">
                   <h3 style={{ flexBasis: "40px" }}>{project.title}</h3>

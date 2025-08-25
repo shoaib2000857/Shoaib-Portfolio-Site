@@ -9,10 +9,19 @@
   --radius: 16px;
 }
 
-html { scroll-behavior: smooth; }
-body { @apply font-body bg-neutral-50 dark:bg-neutral-950 text-neutral-800 dark:text-neutral-200 antialiased; }
+html {
+  scroll-behavior: smooth;
+}
+body {
+  @apply font-body bg-neutral-50 dark:bg-neutral-950 text-neutral-800 dark:text-neutral-200 antialiased;
+}
 /* Keep default cursor inside inputs/textareas even when body hides cursor */
-input, textarea, button, a { cursor: auto; }
+input,
+textarea,
+button,
+a {
+  cursor: auto;
+}
 
 .glass {
   @apply bg-white/40 dark:bg-white/10 backdrop-blur-md border border-white/30 dark:border-white/5 shadow-[0_4px_24px_-4px_rgba(0,0,0,0.15)] rounded-2xl;
@@ -22,17 +31,32 @@ input, textarea, button, a { cursor: auto; }
   @apply bg-gradient-to-r from-primary via-fuchsia-500 to-cyan-400 bg-clip-text text-transparent;
 }
 
-.section-padding { @apply py-20 md:py-28; }
+.section-padding {
+  @apply py-20 md:py-28;
+}
 
-a { @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 rounded-sm; }
+a {
+  @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 rounded-sm;
+}
 
 /* Smooth fade/slide base animation utility */
-.animate-in { animation: fadeInUp .6s cubic-bezier(.16,.84,.44,1) both; }
-@keyframes fadeInUp { from { opacity:0; transform: translateY(24px);} to { opacity:1; transform: translateY(0);} }
+.animate-in {
+  animation: fadeInUp 0.6s cubic-bezier(0.16, 0.84, 0.44, 1) both;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 /* Optional subtle animated noise overlay */
-.noise::before{
-  content:"";
+.noise::before {
+  content: "";
   position: fixed;
   inset: 0;
   pointer-events: none;

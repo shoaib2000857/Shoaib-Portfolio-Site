@@ -16,7 +16,6 @@ body {
   max-width: 100%;
 }
 
-
 div#main {
   display: flex;
   flex-direction: column;
