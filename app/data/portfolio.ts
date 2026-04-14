@@ -36,7 +36,7 @@ export const heroRotatingTitles = [
   "AI systems",
   "Autonomous machines",
   "LLM infrastructure",
-  "Things that actually ship",
+  "Real Things that ship",
 ];
 
 export const reactorNodes = [

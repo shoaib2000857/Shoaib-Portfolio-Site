@@ -12,6 +12,8 @@ export function Hero() {
   const sectionRef = useRef<HTMLElement | null>(null);
   const [activeNodeIndex, setActiveNodeIndex] = useState(0);
   const [titleIndex, setTitleIndex] = useState(0);
+  const [typedTitle, setTypedTitle] = useState("");
+  const [isDeletingTitle, setIsDeletingTitle] = useState(false);
   const activeNode = reactorNodes[activeNodeIndex];
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -26,14 +28,42 @@ export function Hero() {
   const accentTilt = useTransform(softRatioX, [0, 1], [-4, 4]);
 
   useEffect(() => {
-    if (reduceMotion) return;
+    const currentTitle = heroRotatingTitles[titleIndex];
 
-    const interval = window.setInterval(() => {
-      setTitleIndex((current) => (current + 1) % heroRotatingTitles.length);
-    }, 2600);
+    if (reduceMotion) {
+      setTypedTitle(currentTitle);
+      const interval = window.setInterval(() => {
+        setTitleIndex((current) => (current + 1) % heroRotatingTitles.length);
+      }, 2600);
 
-    return () => window.clearInterval(interval);
-  }, [reduceMotion]);
+      return () => window.clearInterval(interval);
+    }
+
+    const isFullyTyped = typedTitle === currentTitle;
+    const isFullyDeleted = typedTitle.length === 0;
+    let timeoutId: number;
+
+    if (!isDeletingTitle && !isFullyTyped) {
+      timeoutId = window.setTimeout(() => {
+        setTypedTitle(currentTitle.slice(0, typedTitle.length + 1));
+      }, 82);
+    } else if (!isDeletingTitle && isFullyTyped) {
+      timeoutId = window.setTimeout(() => {
+        setIsDeletingTitle(true);
+      }, 1050);
+    } else if (isDeletingTitle && !isFullyDeleted) {
+      timeoutId = window.setTimeout(() => {
+        setTypedTitle(currentTitle.slice(0, Math.max(typedTitle.length - 1, 0)));
+      }, 42);
+    } else {
+      timeoutId = window.setTimeout(() => {
+        setIsDeletingTitle(false);
+        setTitleIndex((current) => (current + 1) % heroRotatingTitles.length);
+      }, 220);
+    }
+
+    return () => window.clearTimeout(timeoutId);
+  }, [isDeletingTitle, reduceMotion, titleIndex, typedTitle]);
 
   return (
     <section
@@ -64,24 +94,21 @@ export function Hero() {
             style={{ rotateZ: enabled ? accentTilt : 0 }}
             className="mt-6 max-w-4xl font-display text-5xl font-semibold uppercase leading-[0.9] text-white sm:text-6xl lg:text-7xl xl:text-[5.6rem]"
           >
-            {profile.name}
+            <span className="distort-on-hover">{profile.name}</span>
           </motion.h1>
 
           <div className="hero-rotator-shell mt-7">
             <p className="hero-rotator-prefix">I build</p>
             <div className="hero-rotator-frame" aria-live="polite">
-              <AnimatePresence mode="wait">
-                <motion.p
-                  key={heroRotatingTitles[titleIndex]}
-                  initial={reduceMotion ? false : { opacity: 0, y: 18, filter: "blur(10px)" }}
-                  animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                  exit={reduceMotion ? undefined : { opacity: 0, y: -18, filter: "blur(10px)" }}
-                  transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
-                  className="hero-rotator-copy"
+              <p className="hero-rotator-copy distort-on-hover">
+                {typedTitle}
+                <span
+                  aria-hidden
+                  className={`type-caret ${isDeletingTitle ? "is-deleting" : ""}`}
                 >
-                  {heroRotatingTitles[titleIndex]}
-                </motion.p>
-              </AnimatePresence>
+                  |
+                </span>
+              </p>
             </div>
           </div>
 
@@ -155,7 +182,7 @@ export function Hero() {
                     transition={{ duration: 0.32 }}
                   >
                     <h2 className="mt-4 font-display text-3xl uppercase tracking-[0.18em] text-white sm:text-4xl">
-                      {activeNode.title}
+                      <span className="distort-on-hover">{activeNode.title}</span>
                     </h2>
                     <p className="mt-4 max-w-sm text-sm leading-7 text-[color:var(--text-secondary)]">
                       {activeNode.detail}
