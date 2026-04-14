@@ -32,6 +32,44 @@ export const heroStats = [
   { value: "Patent", label: "Published for Rakshak in January 2026" },
 ];
 
+export const heroRotatingTitles = [
+  "AI systems",
+  "Autonomous machines",
+  "LLM infrastructure",
+  "Things that actually ship",
+];
+
+export const reactorNodes = [
+  {
+    label: "Reliability",
+    title: "LLM Research Signals",
+    detail:
+      "Hidden-state probing, uncertainty analysis, and hallucination detection shaped through live experimentation at LLM Lens.",
+    accent: "#ff4db8",
+  },
+  {
+    label: "Machines",
+    title: "Autonomous Systems",
+    detail:
+      "Robotics work like Rakshak and real-world sensing stacks where perception, control, and safety logic need to hold up together.",
+    accent: "#ff8bd8",
+  },
+  {
+    label: "Infra",
+    title: "Full-Stack Delivery",
+    detail:
+      "FastAPI, Next.js, streaming interfaces, and production-minded systems built to move from prototype to usable software quickly.",
+    accent: "#9b5cff",
+  },
+  {
+    label: "Interface",
+    title: "Motion-Led Product Design",
+    detail:
+      "Interfaces that use atmosphere, interaction, and visual pacing to make technical work feel cinematic instead of generic.",
+    accent: "#c344ff",
+  },
+];
+
 export const signalPillars = [
   {
     title: "Immersive Frontend Systems",
@@ -335,7 +373,8 @@ export const credentials = [
     href: "https://github.com/shoaib2000857/rakshak-website",
   },
   {
-    title: "Weakly Supervised Distillation of Hallucination Signals into Transformer Representations",
+    title:
+      "Weakly Supervised Distillation of Hallucination Signals into Transformer Representations",
     issuer: "arXiv",
     detail:
       "Co-authored arXiv:2604.06277. The paper introduces a weak-supervision framework, a 15k-sample hallucination dataset with full transformer hidden states, and five probing architectures for internal hallucination detection.",

@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import { ActionLink } from "../components/ActionLink";
 import { SectionHeading } from "../components/SectionHeading";
 import { credentials } from "../data/portfolio";
 
@@ -33,14 +34,15 @@ export function Certifications() {
               <p className="mt-4 flex-1 text-sm leading-7 text-[color:var(--text-secondary)]">
                 {credential.detail}
               </p>
-              <a
+              <ActionLink
                 href={credential.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-6 inline-flex items-center gap-2 text-sm uppercase tracking-[0.18em] text-[color:var(--pink-soft)] transition hover:text-white"
+                variant="ghost"
+                className="mt-6 w-fit"
               >
                 Open Credential <span aria-hidden>↗</span>
-              </a>
+              </ActionLink>
             </motion.article>
           ))}
         </div>

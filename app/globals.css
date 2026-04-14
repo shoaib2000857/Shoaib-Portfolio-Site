@@ -94,7 +94,8 @@ textarea {
 .ambient-grid,
 .ambient-vignette,
 .ambient-beam,
-.ambient-orb {
+.ambient-orb,
+.ambient-pointer {
   position: absolute;
 }
 
@@ -176,6 +177,23 @@ textarea {
     radial-gradient(circle at center, transparent 55%, rgba(0, 0, 0, 0.48));
 }
 
+.ambient-pointer {
+  height: 34rem;
+  width: 34rem;
+  border-radius: 999px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    circle,
+    rgba(255, 77, 184, 0.18) 0%,
+    rgba(155, 92, 255, 0.12) 28%,
+    rgba(155, 92, 255, 0.04) 48%,
+    transparent 74%
+  );
+  filter: blur(34px);
+  mix-blend-mode: screen;
+  transition: opacity 220ms ease;
+}
+
 .eyebrow {
   font-family: "Orbitron", sans-serif;
   font-size: 0.72rem;
@@ -185,36 +203,86 @@ textarea {
 }
 
 .panel-shell {
+  --pointer-x: 50%;
+  --pointer-y: 50%;
   position: relative;
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: var(--card-radius);
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.015)),
-    linear-gradient(145deg, rgba(255, 77, 184, 0.08), rgba(91, 40, 170, 0.06) 55%, rgba(0, 0, 0, 0) 100%);
+    linear-gradient(
+      145deg,
+      rgba(255, 77, 184, 0.08),
+      rgba(91, 40, 170, 0.06) 55%,
+      rgba(0, 0, 0, 0) 100%
+    );
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.06),
     0 20px 60px rgba(0, 0, 0, 0.28),
     var(--glow-shadow);
   backdrop-filter: blur(18px);
+  transition:
+    transform 240ms ease,
+    border-color 240ms ease,
+    box-shadow 240ms ease,
+    background-color 240ms ease;
 }
 
 .panel-shell::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.06), transparent 30%, transparent 70%, rgba(255, 77, 184, 0.12));
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.06),
+    transparent 30%,
+    transparent 70%,
+    rgba(255, 77, 184, 0.12)
+  );
   pointer-events: none;
 }
 
+.panel-shell::after,
+.project-card::after,
+.sub-panel::after,
+.field-shell::after,
+.header-shell::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    260px circle at var(--pointer-x) var(--pointer-y),
+    rgba(255, 255, 255, 0.14),
+    rgba(255, 77, 184, 0.08) 26%,
+    transparent 64%
+  );
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 220ms ease;
+}
+
 .sub-panel {
+  --pointer-x: 50%;
+  --pointer-y: 50%;
+  position: relative;
+  overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 1.25rem;
   background: rgba(255, 255, 255, 0.03);
   padding: 1rem 1.1rem;
+  transition:
+    transform 200ms ease,
+    border-color 200ms ease,
+    background-color 200ms ease,
+    box-shadow 200ms ease;
 }
 
 .status-pill {
+  --pointer-x: 50%;
+  --pointer-y: 50%;
+  position: relative;
+  overflow: hidden;
   display: inline-flex;
   align-items: center;
   gap: 0.65rem;
@@ -227,6 +295,20 @@ textarea {
   letter-spacing: 0.24em;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.78);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.status-pill::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    120px circle at var(--pointer-x) var(--pointer-y),
+    rgba(255, 255, 255, 0.14),
+    transparent 68%
+  );
+  opacity: 0;
+  transition: opacity 180ms ease;
 }
 
 .status-dot {
@@ -239,6 +321,11 @@ textarea {
 
 .glow-button,
 .ghost-button {
+  --pointer-x: 50%;
+  --pointer-y: 50%;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -257,6 +344,48 @@ textarea {
     box-shadow 180ms ease;
 }
 
+.action-label {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.glow-button::before,
+.ghost-button::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  z-index: 0;
+  background: radial-gradient(
+    180px circle at var(--pointer-x) var(--pointer-y),
+    rgba(255, 255, 255, 0.18),
+    rgba(255, 77, 184, 0.12) 28%,
+    transparent 64%
+  );
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+
+.glow-button::after,
+.ghost-button::after {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  z-index: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    115deg,
+    rgba(255, 255, 255, 0.12),
+    transparent 32%,
+    transparent 68%,
+    rgba(255, 77, 184, 0.12)
+  );
+  opacity: 0.7;
+  pointer-events: none;
+}
+
 .glow-button {
   border: 1px solid rgba(255, 77, 184, 0.45);
   background: linear-gradient(90deg, rgba(255, 77, 184, 0.18), rgba(155, 92, 255, 0.18));
@@ -271,12 +400,29 @@ textarea {
   color: rgba(255, 255, 255, 0.82);
 }
 
-.glow-button:hover,
-.ghost-button:hover {
-  transform: translateY(-1px);
+.glow-button[disabled],
+.ghost-button[disabled] {
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.action-ripple {
+  position: absolute;
+  z-index: 1;
+  height: 12px;
+  width: 12px;
+  border-radius: 999px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.6), rgba(255, 77, 184, 0.26));
+  animation: ripple 680ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  pointer-events: none;
 }
 
 .tech-pill {
+  --pointer-x: 50%;
+  --pointer-y: 50%;
+  position: relative;
+  overflow: hidden;
   display: inline-flex;
   align-items: center;
   border-radius: 999px;
@@ -286,10 +432,112 @@ textarea {
   font-size: 0.74rem;
   letter-spacing: 0.04em;
   color: rgba(255, 255, 255, 0.72);
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease,
+    color 180ms ease;
+}
+
+.tech-pill::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    120px circle at var(--pointer-x) var(--pointer-y),
+    rgba(255, 255, 255, 0.18),
+    transparent 62%
+  );
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+
+.hero-noise {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 18% 26%, rgba(255, 77, 184, 0.12), transparent 22%),
+    radial-gradient(circle at 88% 14%, rgba(155, 92, 255, 0.12), transparent 20%),
+    linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.025) 18%, transparent 34%);
+  opacity: 0.85;
+}
+
+.hero-rotator-shell {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero-rotator-prefix {
+  font-family: "Orbitron", sans-serif;
+  font-size: 0.74rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.54);
+}
+
+.hero-rotator-frame {
+  position: relative;
+  min-height: 5rem;
+  min-width: min(100%, 28rem);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.5rem;
+  padding: 1rem 1.25rem;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02)),
+    linear-gradient(125deg, rgba(255, 77, 184, 0.08), rgba(155, 92, 255, 0.08));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 16px 40px rgba(0, 0, 0, 0.24);
+}
+
+.hero-rotator-frame::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    transparent 32%,
+    rgba(255, 255, 255, 0.04) 48%,
+    transparent 66%,
+    transparent 100%
+  );
+  animation: scan 5s linear infinite;
+  pointer-events: none;
+}
+
+.hero-rotator-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    220px circle at var(--pointer-x, 50%) var(--pointer-y, 50%),
+    rgba(255, 255, 255, 0.12),
+    transparent 68%
+  );
+  opacity: 0;
+  transition: opacity 220ms ease;
+}
+
+.hero-rotator-copy {
+  position: relative;
+  z-index: 1;
+  font-family: "Orbitron", sans-serif;
+  font-size: clamp(1.35rem, 4vw, 2.45rem);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 0 0 24px rgba(255, 77, 184, 0.26);
 }
 
 .reactor-shell {
   position: relative;
+  isolation: isolate;
   min-height: 34rem;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.09);
@@ -302,6 +550,10 @@ textarea {
     inset 0 1px 0 rgba(255, 255, 255, 0.05),
     0 40px 120px rgba(0, 0, 0, 0.34),
     var(--glow-shadow);
+  transition:
+    transform 240ms ease,
+    border-color 240ms ease,
+    box-shadow 240ms ease;
 }
 
 .reactor-shell::before {
@@ -311,6 +563,22 @@ textarea {
   border-radius: 50%;
   border: 1px dashed rgba(255, 255, 255, 0.11);
   opacity: 0.5;
+}
+
+.reactor-shell::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.04) 48%,
+    transparent 100%
+  );
+  mix-blend-mode: screen;
+  opacity: 0.42;
+  animation: scan 8s linear infinite;
+  pointer-events: none;
 }
 
 .reactor-ring {
@@ -357,12 +625,127 @@ textarea {
 }
 
 .reactor-core-inner {
-  max-width: 22rem;
+  max-width: 23rem;
   text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 1.6rem;
+  padding: 1.4rem 1.5rem;
+  background:
+    radial-gradient(circle at top, rgba(255, 77, 184, 0.1), transparent 65%), rgba(10, 5, 19, 0.78);
+  backdrop-filter: blur(16px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 18px 40px rgba(0, 0, 0, 0.3);
+}
+
+.reactor-orbit-shell {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.reactor-orbit-one {
+  height: 24rem;
+  width: 24rem;
+}
+
+.reactor-orbit-two {
+  height: 18rem;
+  width: 18rem;
+}
+
+.reactor-orbit-three {
+  height: 12.5rem;
+  width: 12.5rem;
+}
+
+.reactor-orbit-four {
+  height: 20.5rem;
+  width: 20.5rem;
+}
+
+.reactor-orbit-track {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.reactor-node-anchor {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -50%);
+}
+
+.reactor-node {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  background: rgba(9, 4, 18, 0.86);
+  padding: 0.6rem 0.9rem;
+  color: white;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 14px 30px rgba(0, 0, 0, 0.26);
+  transition:
+    border-color 180ms ease,
+    background-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.reactor-node::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(circle at center, var(--node-accent), transparent 72%);
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.reactor-node-dot,
+.reactor-node-label {
+  position: relative;
+  z-index: 1;
+}
+
+.reactor-node-dot {
+  height: 0.58rem;
+  width: 0.58rem;
+  border-radius: 999px;
+  background: var(--node-accent);
+  box-shadow: 0 0 18px var(--node-accent);
+}
+
+.reactor-node-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.reactor-caption-row {
+  position: absolute;
+  bottom: 1.4rem;
+  left: 50%;
+  z-index: 4;
+  display: flex;
+  max-width: 92%;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.55rem;
+  transform: translateX(-50%);
 }
 
 .reactor-tag {
-  position: absolute;
+  position: relative;
+  border: 0;
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: rgba(255, 255, 255, 0.04);
@@ -372,22 +755,17 @@ textarea {
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.68);
   backdrop-filter: blur(10px);
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease,
+    background-color 180ms ease;
 }
 
-.reactor-tag-left {
-  left: 1.2rem;
-  top: 1.4rem;
-}
-
-.reactor-tag-right {
-  right: 1.2rem;
-  top: 5.2rem;
-}
-
-.reactor-tag-bottom {
-  bottom: 1.4rem;
-  left: 50%;
-  transform: translateX(-50%);
+.reactor-tag.is-active {
+  border-color: rgba(255, 77, 184, 0.32);
+  background: rgba(255, 77, 184, 0.12);
+  color: white;
 }
 
 .timeline-shell {
@@ -424,6 +802,8 @@ textarea {
 }
 
 .project-card {
+  --pointer-x: 50%;
+  --pointer-y: 50%;
   position: relative;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.09);
@@ -435,6 +815,10 @@ textarea {
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.05),
     0 24px 72px rgba(0, 0, 0, 0.28);
+  transition:
+    transform 240ms ease,
+    border-color 240ms ease,
+    box-shadow 240ms ease;
 }
 
 .project-card-glow {
@@ -447,9 +831,16 @@ textarea {
   background: radial-gradient(circle, var(--card-accent), transparent 68%);
   filter: blur(18px);
   opacity: 0.26;
+  transition:
+    transform 320ms ease,
+    opacity 320ms ease;
 }
 
 .field-shell {
+  --pointer-x: 50%;
+  --pointer-y: 50%;
+  position: relative;
+  overflow: hidden;
   width: 100%;
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 1rem;
@@ -472,6 +863,41 @@ textarea {
 input::placeholder,
 textarea::placeholder {
   color: rgba(255, 255, 255, 0.34);
+}
+
+.header-shell {
+  --pointer-x: 50%;
+  --pointer-y: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-link {
+  position: relative;
+  transition:
+    color 180ms ease,
+    text-shadow 180ms ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.45rem;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 77, 184, 0),
+    rgba(255, 77, 184, 0.95),
+    rgba(155, 92, 255, 0)
+  );
+  opacity: 0;
+  transform: scaleX(0.3);
+  transform-origin: left;
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease;
 }
 
 ::-webkit-scrollbar {
@@ -534,6 +960,96 @@ textarea::placeholder {
   }
 }
 
+@keyframes ripple {
+  0% {
+    opacity: 0.7;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(26);
+  }
+}
+
+@keyframes scan {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+@media (hover: hover) {
+  .panel-shell:hover,
+  .project-card:hover,
+  .reactor-shell:hover {
+    transform: translateY(-6px);
+    border-color: rgba(255, 255, 255, 0.16);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.08),
+      0 28px 84px rgba(0, 0, 0, 0.32),
+      0 0 92px rgba(155, 92, 255, 0.18);
+  }
+
+  .panel-shell:hover::after,
+  .project-card:hover::after,
+  .sub-panel:hover::after,
+  .field-shell:hover::after,
+  .header-shell:hover::after,
+  .status-pill:hover::after,
+  .hero-rotator-frame:hover::after,
+  .glow-button:hover::before,
+  .ghost-button:hover::before,
+  .tech-pill:hover::after {
+    opacity: 1;
+  }
+
+  .sub-panel:hover,
+  .field-shell:hover,
+  .tech-pill:hover,
+  .reactor-tag:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.16);
+  }
+
+  .project-card:hover .project-card-glow {
+    transform: scale(1.18);
+    opacity: 0.44;
+  }
+
+  .glow-button:hover,
+  .ghost-button:hover {
+    border-color: rgba(255, 255, 255, 0.18);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.12),
+      0 0 32px rgba(255, 77, 184, 0.24);
+  }
+
+  .tech-pill:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+  }
+
+  .nav-link:hover {
+    color: white;
+    text-shadow: 0 0 18px rgba(255, 77, 184, 0.42);
+  }
+
+  .nav-link:hover::after {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+
+  .reactor-node:hover {
+    border-color: rgba(255, 255, 255, 0.18);
+    background: rgba(18, 8, 31, 0.94);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.12),
+      0 16px 36px rgba(0, 0, 0, 0.28);
+  }
+}
+
 @media (max-width: 1024px) {
   .section-shell {
     padding: 5.5rem 1rem;
@@ -557,6 +1073,26 @@ textarea::placeholder {
     height: 8rem;
     width: 8rem;
   }
+
+  .reactor-orbit-one {
+    height: 20rem;
+    width: 20rem;
+  }
+
+  .reactor-orbit-two {
+    height: 15rem;
+    width: 15rem;
+  }
+
+  .reactor-orbit-three {
+    height: 10rem;
+    width: 10rem;
+  }
+
+  .reactor-orbit-four {
+    height: 17.5rem;
+    width: 17.5rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -564,21 +1100,64 @@ textarea::placeholder {
     background-size: 72px 72px;
   }
 
-  .reactor-tag-right,
-  .reactor-tag-left,
-  .reactor-tag-bottom {
-    position: static;
-    display: inline-flex;
-    margin: 0.35rem;
-    transform: none;
+  .hero-rotator-shell {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .hero-rotator-frame {
+    min-height: 4.35rem;
+    width: 100%;
+  }
+
+  .ambient-pointer {
+    height: 24rem;
+    width: 24rem;
   }
 
   .reactor-shell {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 0.6rem;
+    gap: 0.8rem;
     padding: 1.25rem;
+  }
+
+  .reactor-orbit-one {
+    height: 17rem;
+    width: 17rem;
+  }
+
+  .reactor-orbit-two {
+    height: 13rem;
+    width: 13rem;
+  }
+
+  .reactor-orbit-three {
+    height: 8.5rem;
+    width: 8.5rem;
+  }
+
+  .reactor-orbit-four {
+    height: 15rem;
+    width: 15rem;
+  }
+
+  .reactor-node {
+    padding: 0.5rem 0.72rem;
+  }
+
+  .reactor-node-label {
+    font-size: 0.62rem;
+    letter-spacing: 0.14em;
+  }
+
+  .reactor-caption-row {
+    position: static;
+    transform: none;
+    margin-top: auto;
+    max-width: 100%;
   }
 }
 

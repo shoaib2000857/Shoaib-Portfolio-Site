@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import { ActionLink } from "../components/ActionLink";
 import { SectionHeading } from "../components/SectionHeading";
 import { featuredProjects } from "../data/portfolio";
 
@@ -55,24 +56,24 @@ export function Projects({ archiveCount }: ProjectsProps) {
                 </div>
                 <div className="mt-8 flex flex-wrap gap-3">
                   {project.demoHref && (
-                    <a
+                    <ActionLink
                       href={project.demoHref}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="glow-button"
+                      variant="glow"
                     >
                       Live Experience
-                    </a>
+                    </ActionLink>
                   )}
                   {project.repoHref && (
-                    <a
+                    <ActionLink
                       href={project.repoHref}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="ghost-button"
+                      variant="ghost"
                     >
                       GitHub Repo
-                    </a>
+                    </ActionLink>
                   )}
                 </div>
               </div>
@@ -92,9 +93,9 @@ export function Projects({ archiveCount }: ProjectsProps) {
               GitHub links and project metadata.
             </p>
           </div>
-          <a href="/projects" className="glow-button">
+          <ActionLink href="/projects" variant="glow">
             Open The Archive
-          </a>
+          </ActionLink>
         </div>
       </div>
     </section>

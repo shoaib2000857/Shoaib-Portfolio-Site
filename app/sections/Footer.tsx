@@ -1,4 +1,5 @@
 import React from "react";
+import { ActionLink } from "../components/ActionLink";
 import { contactLinks, profile } from "../data/portfolio";
 
 export function Footer() {
@@ -16,15 +17,15 @@ export function Footer() {
         </div>
         <nav className="flex flex-wrap gap-3 text-sm">
           {contactLinks.map((link) => (
-            <a
+            <ActionLink
               key={link.href}
               href={link.href}
               target={link.href.startsWith("http") ? "_blank" : undefined}
               rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
-              className="ghost-button"
+              variant="ghost"
             >
               {link.label}
-            </a>
+            </ActionLink>
           ))}
         </nav>
         <p className="text-xs uppercase tracking-[0.24em] text-white/35">

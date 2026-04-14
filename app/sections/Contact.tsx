@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { ActionButton } from "../components/ActionButton";
 import { SectionHeading } from "../components/SectionHeading";
 import { contactLinks, profile } from "../data/portfolio";
 
@@ -102,13 +103,13 @@ export function Contact() {
                 <textarea name="message" rows={6} required className="field-shell resize-none" />
               </label>
               <div className="flex flex-wrap items-center gap-4 pt-2">
-                <button disabled={status === "sending"} className="glow-button">
+                <ActionButton disabled={status === "sending"} type="submit" variant="glow">
                   {status === "sending"
                     ? "Sending..."
                     : status === "sent"
                       ? "Sent"
                       : "Send Message"}
-                </button>
+                </ActionButton>
                 <p className="text-sm text-[color:var(--text-secondary)]">
                   Direct line: {profile.email}
                 </p>

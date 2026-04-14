@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { ActionLink } from "../components/ActionLink";
 import type { ProjectArchiveItem, ProjectArchiveSummary } from "../data/projectArchive";
 
 type ProjectsArchiveClientProps = {
@@ -49,13 +50,20 @@ export function ProjectsArchiveClient({ projects, summary }: ProjectsArchiveClie
             { label: "Original Builds", value: summary.originalRepositories },
             { label: "Forked Repos", value: summary.forkedRepositories },
             { label: "Live Deployments", value: summary.liveProjects },
-          ].map((stat) => (
-            <div key={stat.label} className="panel-shell p-6">
+          ].map((stat, index) => (
+            <motion.div
+              key={stat.label}
+              initial={{ opacity: 0, y: 18 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.4 }}
+              transition={{ duration: 0.45, delay: index * 0.05 }}
+              className="panel-shell p-6"
+            >
               <p className="eyebrow">{stat.label}</p>
               <p className="mt-4 font-display text-4xl uppercase tracking-[0.14em] text-white">
                 {stat.value}
               </p>
-            </div>
+            </motion.div>
           ))}
         </div>
 
@@ -245,24 +253,24 @@ export function ProjectsArchiveClient({ projects, summary }: ProjectsArchiveClie
                   </div>
 
                   <div className="mt-8 flex flex-wrap gap-3">
-                    <a
+                    <ActionLink
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="ghost-button"
+                      variant="ghost"
                     >
                       GitHub Repo
-                    </a>
+                    </ActionLink>
                     {project.liveLinks.map((link, linkIndex) => (
-                      <a
+                      <ActionLink
                         key={link}
                         href={link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={linkIndex === 0 ? "glow-button" : "ghost-button"}
+                        variant={linkIndex === 0 ? "glow" : "ghost"}
                       >
                         {linkIndex === 0 ? "Live Link" : "Extra Link"}
-                      </a>
+                      </ActionLink>
                     ))}
                   </div>
                 </div>
