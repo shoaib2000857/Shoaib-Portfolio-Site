@@ -1,93 +1,47 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
-import bg from "../../src/images/light-bg.jpg";
-
-const certifications = [
-  {
-    title: "CS50X",
-    description:
-      "Harvard's Introduction to Computer Science course. Topics include algorithms, data structures, and programming languages.",
-    url: "https://cs50.harvard.edu/certificates/16aea33a-336d-44bd-a0cb-3cd77b3b0e8f.png?size=letter",
-  },
-  {
-    title: "Udemy 100 Days of Code: The Complete Python Pro Bootcamp (in progress)",
-    description: "Course that covers Python programming, data science, web development, and more.",
-    url: "https://www.udemy.com/course/100-days-of-code/",
-  },
-  {
-    title: "Udemy The Complete 2024 Web Development Bootcamp (in progress)",
-    description:
-      "A comprehensive web development course that covers HTML, CSS, JavaScript, Node.js, and more.",
-    url: "https://www.udemy.com/course/the-complete-web-development-bootcamp/",
-  },
-  {
-    title: "Udemy Java 17 Masterclass: Start Coding in 2024 (in progress)",
-    description:
-      "A comprehensive Java course that covers object-oriented programming, data structures, and more.",
-    url: "https://www.udemy.com/course/java-the-complete-java-developer-course/",
-  },
-  {
-    title: "Udemy Beginning C++ Programming - From Beginner to Beyond (in progress)",
-    description:
-      "A comprehensive C++ course that covers object-oriented programming, data structures, and more.",
-    url: "https://www.udemy.com/course/beginning-c-plus-plus-programming/",
-  },
-  // Newly added entries
-  {
-    title: "Deloitte Forage Virtual Internship Simulation",
-    description:
-      "Completed Deloitte Technology Virtual Internship simulation on Forage (consulting & technology case tasks).",
-    url: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_dLm4iG9aarv9qSbLi_1751649575059_completion_certificate.pdf",
-  },
-  {
-    title: "Postman Student API Fundamentals",
-    description:
-      "Completed Postman Student API Fundamentals training covering APIs, requests, collections, tests, environments, and collaboration basics.",
-    url: "https://www.postman.com/student-program/",
-  },
-  {
-    title: "Prakalp - First Prize & Coordinator",
-    description:
-      "Achieved First Prize and served as event coordinator for Prakalp (innovation / project showcase).",
-    url: "#",
-  },
-];
+import { SectionHeading } from "../components/SectionHeading";
+import { credentials } from "../data/portfolio";
 
 export function Certifications() {
   return (
-    <section id="certifications" className="section-padding relative">
-      <Image
-        src={bg}
-        alt="purple and blue abstract background"
-        fill
-        unoptimized
-        className="object-cover opacity-30"
-      />
-      <div className="relative max-w-6xl mx-auto px-4 md:px-8">
-        <h2 className="heading-gradient text-3xl md:text-4xl font-semibold text-center mb-12">
-          Certifications
-        </h2>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {certifications.map((c, i) => (
-            <motion.div
-              key={c.title}
+    <section id="proof" className="section-shell">
+      <div className="mx-auto max-w-7xl">
+        <SectionHeading
+          eyebrow="Proof Layer"
+          title="Credentials, Recognition, And Published Work"
+          description="This layer combines formal coursework with recognitions, cohort selections, and published intellectual property that materially strengthen the portfolio."
+        />
+
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          {credentials.map((credential, index) => (
+            <motion.article
+              key={credential.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.05 }}
-              className="glass p-6 flex flex-col"
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.55, delay: index * 0.04 }}
+              className="panel-shell flex h-full flex-col p-6"
             >
+              <p className="text-xs uppercase tracking-[0.28em] text-[color:var(--pink-soft)]">
+                {credential.issuer}
+              </p>
+              <h3 className="mt-4 font-display text-xl uppercase tracking-[0.12em] text-white">
+                {credential.title}
+              </h3>
+              <p className="mt-4 flex-1 text-sm leading-7 text-[color:var(--text-secondary)]">
+                {credential.detail}
+              </p>
               <a
-                href={c.url}
+                href={credential.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-semibold mb-3 leading-snug hover:underline"
+                className="mt-6 inline-flex items-center gap-2 text-sm uppercase tracking-[0.18em] text-[color:var(--pink-soft)] transition hover:text-white"
               >
-                {c.title}
+                Open Credential <span aria-hidden>↗</span>
               </a>
-              <p className="text-sm opacity-80 leading-relaxed">{c.description}</p>
-            </motion.div>
+            </motion.article>
           ))}
         </div>
       </div>

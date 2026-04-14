@@ -1,41 +1,40 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-
-const items = [
-  {
-    title: "CS50x Graduate",
-    detail: "Completed Harvard's CS50x with a capstone project (Task Master)",
-  },
-  {
-    title: "Hackathons",
-    detail: "Participated in Google GenAI, Bandipur House CTC, and Codeinovate",
-  },
-  {
-    title: "Open Source / Content",
-    detail: "Contributions and content around web and data science",
-  },
-];
+import { SectionHeading } from "../components/SectionHeading";
+import { signalStack } from "../data/portfolio";
 
 export function Achievements() {
   return (
-    <section id="achievements" className="section-padding">
-      <div className="max-w-6xl mx-auto px-4 md:px-8">
-        <h2 className="heading-gradient text-3xl md:text-4xl font-semibold text-center mb-10">
-          Achievements
-        </h2>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {items.map((a, i) => (
-            <motion.div
-              key={a.title}
-              initial={{ opacity: 0, y: 20 }}
+    <section id="stack" className="section-shell">
+      <div className="mx-auto max-w-7xl">
+        <SectionHeading
+          eyebrow="Build Stack"
+          title="The System Behind The Aesthetic"
+          description="The visual language is intentionally dramatic, but the work underneath it is grounded in shipping, iteration, and a growing multidisciplinary stack."
+        />
+
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          {signalStack.map((group, index) => (
+            <motion.article
+              key={group.label}
+              initial={{ opacity: 0, y: 28 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.05 }}
-              className="glass p-6"
+              viewport={{ once: true, amount: 0.25 }}
+              transition={{ duration: 0.55, delay: index * 0.06 }}
+              className="panel-shell p-6"
             >
-              <h3 className="font-semibold mb-2">{a.title}</h3>
-              <p className="text-sm opacity-80 leading-relaxed">{a.detail}</p>
-            </motion.div>
+              <p className="text-xs uppercase tracking-[0.28em] text-[color:var(--pink-soft)]">
+                {group.label}
+              </p>
+              <div className="mt-5 flex flex-wrap gap-3">
+                {group.items.map((item) => (
+                  <span key={item} className="tech-pill">
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </motion.article>
           ))}
         </div>
       </div>

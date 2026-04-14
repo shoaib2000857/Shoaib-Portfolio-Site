@@ -1,8 +1,10 @@
 "use client";
 import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { SectionHeading } from "../components/SectionHeading";
+import { contactLinks, profile } from "../data/portfolio";
 
-// Simple contact form using Formspree (replace with your form ID)
-const FORMSPREE = "https://formspree.io/f/movqwzjn"; // TODO: replace with your endpoint
+const FORMSPREE = "https://formspree.io/f/movqwzjn";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
@@ -29,47 +31,99 @@ export function Contact() {
   }
 
   return (
-    <section id="contact" className="section-padding">
-      <div className="max-w-xl mx-auto glass p-8 md:p-10">
-        <h2 className="heading-gradient text-3xl md:text-4xl font-semibold text-center mb-6">
-          Contact
-        </h2>
-        <form onSubmit={onSubmit} className="grid gap-4">
-          <label className="grid gap-1">
-            <span className="text-sm">Name</span>
-            <input
-              name="name"
-              required
-              className="px-3 py-2 rounded-lg bg-white/60 dark:bg-white/10 border border-white/30 dark:border-white/10"
-            />
-          </label>
-          <label className="grid gap-1">
-            <span className="text-sm">Email</span>
-            <input
-              type="email"
-              name="email"
-              required
-              className="px-3 py-2 rounded-lg bg-white/60 dark:bg-white/10 border border-white/30 dark:border-white/10"
-            />
-          </label>
-          <label className="grid gap-1">
-            <span className="text-sm">Message</span>
-            <textarea
-              name="message"
-              rows={5}
-              required
-              className="px-3 py-2 rounded-lg bg-white/60 dark:bg-white/10 border border-white/30 dark:border-white/10"
-            />
-          </label>
-          <button disabled={status === "sending"} className="glass px-5 py-2 font-medium">
-            {status === "sending" ? "Sending..." : status === "sent" ? "Sent ✓" : "Send"}
-          </button>
-          {status === "error" && (
-            <p role="alert" className="text-red-600">
-              Something went wrong. Please try again.
+    <section id="contact" className="section-shell pb-20">
+      <div className="mx-auto max-w-7xl">
+        <SectionHeading
+          eyebrow="Transmission"
+          title="Let’s Build Something That Feels Alive"
+          description="If you want to collaborate on a product, internship, experiment, or interface that needs stronger visual energy, send a message."
+        />
+
+        <div className="grid gap-6 lg:grid-cols-[0.82fr_1.18fr]">
+          <motion.aside
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.55 }}
+            className="panel-shell p-7 md:p-8"
+          >
+            <p className="eyebrow">Open Channel</p>
+            <h3 className="mt-4 font-display text-3xl uppercase tracking-[0.14em] text-white">
+              {profile.availability}
+            </h3>
+            <p className="mt-5 text-sm leading-7 text-[color:var(--text-secondary)]">
+              Best reached by email, but you can also connect through GitHub, LinkedIn, or YouTube.
+              This portfolio was rebuilt as a sci-fi interface system and is meant to reflect the
+              kind of visual ambition I want to bring into future products.
             </p>
-          )}
-        </form>
+
+            <div className="mt-8 grid gap-4">
+              {contactLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  target={link.href.startsWith("http") ? "_blank" : undefined}
+                  rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                  className="sub-panel transition hover:border-[rgba(255,77,184,0.28)]"
+                >
+                  <p className="text-xs uppercase tracking-[0.28em] text-[color:var(--pink-soft)]">
+                    {link.label}
+                  </p>
+                  <p className="mt-3 break-all text-sm leading-7 text-white/80">{link.value}</p>
+                </a>
+              ))}
+            </div>
+          </motion.aside>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.6, delay: 0.08 }}
+            className="panel-shell p-7 md:p-8"
+          >
+            <form onSubmit={onSubmit} className="grid gap-5">
+              <label className="grid gap-2">
+                <span className="text-xs uppercase tracking-[0.28em] text-[color:var(--pink-soft)]">
+                  Name
+                </span>
+                <input name="name" required className="field-shell" />
+              </label>
+              <label className="grid gap-2">
+                <span className="text-xs uppercase tracking-[0.28em] text-[color:var(--pink-soft)]">
+                  Email
+                </span>
+                <input type="email" name="email" required className="field-shell" />
+              </label>
+              <label className="grid gap-2">
+                <span className="text-xs uppercase tracking-[0.28em] text-[color:var(--pink-soft)]">
+                  Message
+                </span>
+                <textarea name="message" rows={6} required className="field-shell resize-none" />
+              </label>
+              <div className="flex flex-wrap items-center gap-4 pt-2">
+                <button disabled={status === "sending"} className="glow-button">
+                  {status === "sending"
+                    ? "Sending..."
+                    : status === "sent"
+                      ? "Sent"
+                      : "Send Message"}
+                </button>
+                <p className="text-sm text-[color:var(--text-secondary)]">
+                  Direct line: {profile.email}
+                </p>
+              </div>
+              {status === "error" && (
+                <p role="alert" className="text-sm text-[#ff8dcf]">
+                  Transmission failed. Please try again.
+                </p>
+              )}
+              {status === "sent" && (
+                <p className="text-sm text-[#ffc9eb]">Message delivered successfully.</p>
+              )}
+            </form>
+          </motion.div>
+        </div>
       </div>
     </section>
   );

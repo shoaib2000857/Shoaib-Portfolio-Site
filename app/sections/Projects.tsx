@@ -1,106 +1,100 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
-import desk from "../../src/images/design-desk.jpeg";
-import bg from "../../src/images/dark-bg.jpg";
+import { SectionHeading } from "../components/SectionHeading";
+import { featuredProjects } from "../data/portfolio";
 
-const projects = [
-  {
-    title: "10 Things To Know About Azure Static Web Apps 🎉",
-    description:
-      "Collaboration to create a beginner friendly article to help explain Azure Static Web Apps and tooling to get started.",
-    url: "https://dev.to/azure/10-things-to-know-about-azure-static-web-apps-3n4i",
-  },
-  {
-    title: "Web Development for Beginners",
-    description:
-      "Contributed sketch note imagery to accompany each lesson. These help provide visual representation of what is being taught.",
-    url: "https://github.com/microsoft/web-dev-for-beginners",
-  },
-  {
-    title: "My Resume Site",
-    description:
-      "Created from Microsoft's resume workshop and deployed to GitHub pages. Includes my experience and design abilities.",
-    url: "https://shoaib2000857.github.io/Shoaib-Portfolio-Site/",
-  },
-  {
-    title: "GitHub Codespaces and github.dev",
-    description:
-      "Video interview to explain when to use GitHub.dev versus GitHub Codespaces, and how best to use each tool.",
-    url: "https://www.youtube.com/watch?v=c3hHhRME_XI",
-  },
-  {
-    title: "Task Master - My CS50X Project",
-    description:
-      "My CS50X Project Task Master Which is a all in one task manager and timetable app",
-    url: "https://cs50project.shoaibssm.me",
-  },
-  {
-    title: "Purr-fessor",
-    description: "Project made got the google GEN AI hackathon",
-    url: "https://ai-study-assistant.vercel.app/",
-  },
-  {
-    title: "Elyon The Guide",
-    description: "Project Made for the Bandipur House CTC Hackathon",
-    url: "https://elyon.shoaibssm.me",
-  },
-  {
-    title: "Maargdarshak",
-    description: "Project Made for Codeinovate Hackathon",
-    url: "https://maargdarshak.shoaibssm.me",
-  },
-  {
-    title: "Rakshak",
-    description: "An Autonomus Security Rover Designed for surveilence and intruder detection",
-    url: "https://rakshak.shoaibssm.me",
-  },
-];
+type ProjectsProps = {
+  archiveCount: number;
+};
 
-export function Projects() {
+export function Projects({ archiveCount }: ProjectsProps) {
   return (
-    <section id="projects" className="section-padding relative">
-      <Image
-        src={bg}
-        alt="desktop with books and laptop"
-        fill
-        unoptimized
-        className="object-cover opacity-20"
-      />
-      <div className="relative max-w-6xl mx-auto px-4 md:px-8">
-        <h2 className="heading-gradient text-3xl md:text-4xl font-semibold text-center mb-10">
-          Portfolio
-        </h2>
-        <div className="flex justify-center mb-10">
-          <Image
-            src={desk}
-            alt="desktop with books and laptop"
-            className="rounded-xl shadow-xl w-full max-w-3xl h-auto"
-            unoptimized
-          />
-        </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((p, i) => (
-            <motion.div
-              key={p.title}
+    <section id="projects" className="section-shell">
+      <div className="mx-auto max-w-7xl">
+        <SectionHeading
+          eyebrow="Project Grid"
+          title="Featured Builds Plus A Full Archive"
+          description="The landing page stays selective on purpose. It highlights the projects that best represent the current direction of my work, while the complete archive carries every tracked repository."
+        />
+
+        <div className="grid gap-6 lg:grid-cols-2">
+          {featuredProjects.map((project, index) => (
+            <motion.article
+              key={project.title}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.04 }}
-              className="group relative glass p-6 flex flex-col"
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.65, delay: index * 0.05 }}
+              className="project-card"
+              style={{ ["--card-accent" as string]: project.accent }}
             >
-              <h3 className="font-semibold mb-2 leading-snug pr-10">{p.title}</h3>
-              <p className="text-sm opacity-80 leading-relaxed flex-1">{p.description}</p>
-              <a
-                href={p.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline"
-              >
-                Visit <span aria-hidden>→</span>
-              </a>
-            </motion.div>
+              <div className="project-card-glow" />
+              <div className="relative z-10">
+                <div className="flex flex-wrap items-center gap-3">
+                  <span className="status-pill">{project.category}</span>
+                  <span className="inline-flex rounded-full border border-white/10 px-3 py-1 text-[0.68rem] uppercase tracking-[0.24em] text-white/50">
+                    {project.status}
+                  </span>
+                </div>
+                <h3 className="mt-6 max-w-xl font-display text-3xl uppercase tracking-[0.12em] text-white">
+                  {project.title}
+                </h3>
+                <p className="mt-5 max-w-2xl text-base leading-8 text-white/80">
+                  {project.description}
+                </p>
+                <p className="mt-4 max-w-2xl text-sm leading-7 text-[color:var(--text-secondary)]">
+                  {project.impact}
+                </p>
+                <div className="mt-6 flex flex-wrap gap-3">
+                  {project.stack.map((item) => (
+                    <span key={item} className="tech-pill">
+                      {item}
+                    </span>
+                  ))}
+                </div>
+                <div className="mt-8 flex flex-wrap gap-3">
+                  {project.demoHref && (
+                    <a
+                      href={project.demoHref}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="glow-button"
+                    >
+                      Live Experience
+                    </a>
+                  )}
+                  {project.repoHref && (
+                    <a
+                      href={project.repoHref}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="ghost-button"
+                    >
+                      GitHub Repo
+                    </a>
+                  )}
+                </div>
+              </div>
+            </motion.article>
           ))}
+        </div>
+
+        <div className="panel-shell mt-8 flex flex-col gap-6 p-6 md:flex-row md:items-center md:justify-between md:p-8">
+          <div>
+            <p className="eyebrow">Complete Inventory</p>
+            <h3 className="mt-4 font-display text-2xl uppercase tracking-[0.14em] text-white md:text-3xl">
+              Full Project Archive
+            </h3>
+            <p className="mt-4 max-w-3xl text-sm leading-7 text-[color:var(--text-secondary)]">
+              Browse all {archiveCount} repositories from personal work, organization projects,
+              experimental builds, forks, and deployed products in one dedicated archive page with
+              GitHub links and project metadata.
+            </p>
+          </div>
+          <a href="/projects" className="glow-button">
+            Open The Archive
+          </a>
         </div>
       </div>
     </section>

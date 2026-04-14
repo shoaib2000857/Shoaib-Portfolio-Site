@@ -2,7 +2,7 @@
   "name": "shoaib-portfolio",
   "version": "2.0.0",
   "private": true,
-  "description": "Shoaib Sadiq Salehmohamed portfolio (Next.js 14 + TypeScript + Tailwind)",
+  "description": "Shoaib Sadiq Salehmohamed sci-fi portfolio built with Next.js 14, TypeScript, Tailwind CSS, and Framer Motion",
   "homepage": "https://shoaib2000857.github.io/Shoaib-Portfolio-Site",
   "scripts": {
     "dev": "next dev",

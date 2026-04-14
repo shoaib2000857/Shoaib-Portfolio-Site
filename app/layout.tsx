@@ -1,14 +1,15 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { ThemeProvider } from "next-themes";
 import React, { ReactNode } from "react";
 
 export const metadata: Metadata = {
-  title: "Shoaib's Portfolio",
-  description: "Portfolio of Shoaib Sadiq Salehmohamed - Data Science and Programming Student",
+  title: "Shoaib Sadiq Salehmohamed | Sci-Fi Portfolio",
+  description:
+    "Immersive portfolio for Shoaib Sadiq Salehmohamed, featuring projects, credentials, and a cinematic sci-fi interface.",
   openGraph: {
-    title: "Shoaib's Portfolio",
-    description: "Portfolio of Shoaib Sadiq Salehmohamed - Data Science and Programming Student",
+    title: "Shoaib Sadiq Salehmohamed | Sci-Fi Portfolio",
+    description:
+      "Immersive portfolio for Shoaib Sadiq Salehmohamed, featuring projects, credentials, and a cinematic sci-fi interface.",
     type: "website",
   },
   metadataBase: new URL("https://shoaibssm.me"),
@@ -16,12 +17,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body>
-        <ThemeProvider attribute="class" enableSystem disableTransitionOnChange>
-          {children}
-        </ThemeProvider>
-      </body>
+    <html lang="en">
+      <body>{children}</body>
     </html>
   );
 }

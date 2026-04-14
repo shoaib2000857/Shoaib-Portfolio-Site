@@ -1,0 +1,74 @@
+{
+  "total_repositories": 69,
+  "sources": {
+    "users": [
+      "shoaib2000857"
+    ],
+    "orgs": [
+      "Team-Aston",
+      "Team-ASHTOJ"
+    ]
+  },
+  "top_languages_by_repo_count": [
+    [
+      "JavaScript",
+      40
+    ],
+    [
+      "CSS",
+      40
+    ],
+    [
+      "HTML",
+      34
+    ],
+    [
+      "Python",
+      33
+    ],
+    [
+      "Shell",
+      10
+    ],
+    [
+      "TypeScript",
+      10
+    ],
+    [
+      "Vue",
+      7
+    ],
+    [
+      "Dockerfile",
+      6
+    ],
+    [
+      "Batchfile",
+      4
+    ],
+    [
+      "Jupyter Notebook",
+      3
+    ],
+    [
+      "C",
+      2
+    ],
+    [
+      "C++",
+      2
+    ],
+    [
+      "PowerShell",
+      2
+    ],
+    [
+      "Assembly",
+      2
+    ],
+    [
+      "SCSS",
+      2
+    ]
+  ]
+}
