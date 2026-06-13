@@ -1,0 +1,46 @@
+import Link from "next/link";
+import { CaseStudy } from "../data/content";
+import { EvidenceTag } from "./EvidenceTag";
+import { Pipeline } from "./Pipeline";
+
+/** A case study rendered as a dossier card. Used on the homepage and /work. */
+export function CaseCard({ study, index }: { study: CaseStudy; index: number }) {
+  return (
+    <Link
+      href={`/work/${study.slug}`}
+      className="panel panel--hover group flex flex-col p-7 sm:p-8"
+    >
+      <div className="flex items-start justify-between gap-4">
+        <span className="font-mono text-sm text-muted-2">{String(index + 1).padStart(2, "0")}</span>
+        <EvidenceTag tone={study.badgeTone}>{study.badge}</EvidenceTag>
+      </div>
+
+      <h3 className="mt-5 font-display text-2xl text-fg">{study.title}</h3>
+      <p className="mt-1 font-mono text-[0.72rem] uppercase tracking-[0.12em] text-muted">
+        {study.category}
+      </p>
+
+      <p className="mt-4 text-sm leading-relaxed text-fg-dim">{study.oneLiner}</p>
+
+      <div className="mt-6 border-t border-hairline pt-5">
+        <Pipeline nodes={study.pipeline} />
+      </div>
+
+      <div className="mt-6 flex flex-wrap items-center gap-2">
+        {study.stack.slice(0, 4).map((s) => (
+          <span
+            key={s}
+            className="font-mono text-[0.66rem] uppercase tracking-[0.08em] text-muted-2"
+          >
+            {s}
+          </span>
+        ))}
+      </div>
+
+      <span className="mt-6 inline-flex items-center gap-2 font-mono text-[0.7rem] uppercase tracking-[0.12em] text-teal">
+        Open dossier
+        <span className="transition-transform group-hover:translate-x-1">→</span>
+      </span>
+    </Link>
+  );
+}

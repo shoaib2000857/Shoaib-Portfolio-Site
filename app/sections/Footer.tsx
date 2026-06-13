@@ -1,36 +1,42 @@
-import React from "react";
-import { ActionLink } from "../components/ActionLink";
+import Link from "next/link";
 import { contactLinks, profile } from "../data/portfolio";
 
 export function Footer() {
   return (
-    <footer className="px-4 pb-10 pt-4 sm:px-6">
-      <div className="mx-auto flex max-w-7xl flex-col gap-6 rounded-[2rem] border border-white/10 bg-[rgba(9,4,18,0.72)] px-6 py-8 backdrop-blur-xl md:flex-row md:items-center md:justify-between">
-        <div>
-          <p className="font-display text-xl uppercase tracking-[0.22em] text-white">
-            {profile.callsign}
-          </p>
-          <p className="mt-2 max-w-xl text-sm leading-7 text-[color:var(--text-secondary)]">
-            Portfolio interface rebuilt with a dark purple and deep pink sci-fi system using
-            Next.js, Tailwind CSS, and Framer Motion.
+    <footer className="border-t border-hairline bg-ink-2">
+      <div className="shell flex flex-col gap-8 py-12 md:flex-row md:items-end md:justify-between">
+        <div className="max-w-md">
+          <div className="flex items-center gap-2.5">
+            <span className="h-2 w-2 rounded-full bg-teal shadow-[0_0_8px_rgba(91,215,200,0.8)]" />
+            <span className="font-mono text-sm font-semibold tracking-[0.18em] text-fg">
+              SSM /SIGNAL
+            </span>
+          </div>
+          <p className="mt-4 text-sm leading-relaxed text-muted">
+            Signal from noise — AI systems, research prototypes, and full-stack products, with proof
+            attached. Built with Next.js, Tailwind, and Framer Motion.
           </p>
         </div>
-        <nav className="flex flex-wrap gap-3 text-sm">
+
+        <nav className="flex flex-wrap gap-x-6 gap-y-2">
           {contactLinks.map((link) => (
-            <ActionLink
+            <Link
               key={link.href}
               href={link.href}
               target={link.href.startsWith("http") ? "_blank" : undefined}
               rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
-              variant="ghost"
+              className="font-mono text-xs uppercase tracking-[0.14em] text-muted transition-colors hover:text-teal"
             >
-              {link.label}
-            </ActionLink>
+              {link.label} ↗
+            </Link>
           ))}
         </nav>
-        <p className="text-xs uppercase tracking-[0.24em] text-white/35">
-          Created by {profile.name}
-        </p>
+      </div>
+      <div className="shell flex flex-col gap-1 border-t border-hairline py-5 text-[0.7rem] text-muted-2 sm:flex-row sm:items-center sm:justify-between">
+        <span className="font-mono tracking-[0.12em]">
+          © {new Date().getFullYear()} {profile.name}
+        </span>
+        <span className="font-mono tracking-[0.12em]">{profile.location}</span>
       </div>
     </footer>
   );

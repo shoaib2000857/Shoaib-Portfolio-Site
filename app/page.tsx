@@ -1,48 +1,28 @@
 import { Hero } from "./sections/Hero";
-import { About } from "./sections/About";
-import { Experience } from "./sections/Experience";
-import { Education } from "./sections/Education";
-import { Certifications } from "./sections/Certifications";
-import { Projects } from "./sections/Projects";
-import { Footer } from "./sections/Footer";
-import { Achievements } from "./sections/Achievements";
+import { SelectedProof } from "./sections/SelectedProof";
+import { CoreDirection } from "./sections/CoreDirection";
+import { FeaturedWork } from "./sections/FeaturedWork";
+import { ResearchStrip } from "./sections/ResearchStrip";
+import { BuildLog } from "./sections/BuildLog";
+import { Toolchain } from "./sections/Toolchain";
 import { Contact } from "./sections/Contact";
-import { AmbientBackground } from "./components/AmbientBackground";
-import { BootSequence } from "./components/BootSequence";
-import { CustomCursor } from "./components/CustomCursor";
-import { InteractionProvider } from "./components/InteractionProvider";
-import { ScrollProgress } from "./components/ScrollProgress";
-import { SiteHeader } from "./components/SiteHeader";
-import { projectArchiveSummary } from "./data/projectArchive";
+import { SignalDivider } from "./components/SignalDivider";
 
 export default function Page() {
   return (
-    <div className="site-shell">
-      <BootSequence>
-        <InteractionProvider>
-          <AmbientBackground />
-          <ScrollProgress />
-          <CustomCursor />
-          <a
-            href="#content"
-            className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[70] focus:rounded-full focus:bg-white focus:px-4 focus:py-2 focus:text-black"
-          >
-            Skip to content
-          </a>
-          <SiteHeader />
-          <main id="content" className="content-shell relative">
-            <Hero />
-            <About />
-            <Experience />
-            <Achievements />
-            <Education />
-            <Certifications />
-            <Projects archiveCount={projectArchiveSummary.totalRepositories} />
-            <Contact />
-            <Footer />
-          </main>
-        </InteractionProvider>
-      </BootSequence>
-    </div>
+    <>
+      <Hero />
+      {/* the motif as a statement: noise resolving into signal */}
+      <div className="py-6">
+        <SignalDivider />
+      </div>
+      <SelectedProof />
+      <CoreDirection />
+      <FeaturedWork />
+      <ResearchStrip />
+      <BuildLog />
+      <Toolchain />
+      <Contact />
+    </>
   );
 }
