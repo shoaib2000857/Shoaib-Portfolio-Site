@@ -133,7 +133,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     stack: ["FastAPI", "Next.js", "WebSockets", "Redis", "PostgreSQL", "MongoDB"],
     links: [],
-    featured: false,
+    featured: true,
   },
   {
     slug: "astraos",
@@ -181,7 +181,7 @@ export const selectedProof = [
   {
     n: "02",
     label: "Research",
-    title: "LLM Reliability, published",
+    title: "LLM Reliability Research",
     detail: "Co-authored arXiv:2604.06277 on hidden-state hallucination detection at LLM Lens.",
     href: "/research",
   },

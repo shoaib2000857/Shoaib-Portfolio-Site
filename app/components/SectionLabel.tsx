@@ -17,7 +17,7 @@ export function SectionLabel({ index, children, meta, className = "" }: SectionL
       <div className="flex items-center gap-3">
         <span className="h-1.5 w-1.5 rounded-full bg-teal shadow-[0_0_8px_rgba(91,215,200,0.7)]" />
         <span className="label">
-          {index ? <span className="text-teal">{index}</span> : null}
+          {index ? <span className="text-teal">CH·{index}</span> : null}
           {index ? <span className="mx-2 text-muted-2">/</span> : null}
           {children}
         </span>

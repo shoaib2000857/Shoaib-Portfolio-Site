@@ -11,6 +11,31 @@ export function CaseCard({ study, index }: { study: CaseStudy; index: number }) 
       href={`/work/${study.slug}`}
       className="panel panel--hover panel--archive group flex flex-col p-7 sm:p-8"
     >
+      {/* nebula bloom on hover (atmosphere, not blue) */}
+      <span
+        aria-hidden
+        className="pointer-events-none absolute -right-12 -top-12 h-44 w-44 rounded-full opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-50"
+        style={{ background: "radial-gradient(circle, #6E4FB0, transparent 70%)" }}
+      />
+      {/* a micro-constellation forms on hover — signals connecting */}
+      <svg
+        aria-hidden
+        viewBox="0 0 112 80"
+        className="pointer-events-none absolute right-5 top-5 h-16 w-24 opacity-0 transition-opacity duration-700 group-hover:opacity-70"
+      >
+        <g stroke="#3A8F86" strokeWidth="0.6">
+          <line x1="12" y1="58" x2="42" y2="30" />
+          <line x1="42" y1="30" x2="72" y2="50" />
+          <line x1="72" y1="50" x2="98" y2="20" />
+          <line x1="42" y1="30" x2="58" y2="72" />
+        </g>
+        <circle cx="12" cy="58" r="1.3" fill="#8A86A0" />
+        <circle cx="42" cy="30" r="1.6" fill="#A589D8" />
+        <circle cx="72" cy="50" r="1.3" fill="#8A86A0" />
+        <circle cx="58" cy="72" r="1.2" fill="#8A86A0" />
+        <circle cx="98" cy="20" r="2" fill="#F5A524" />
+      </svg>
+
       {/* archive header strip */}
       <div className="flex items-start justify-between gap-4">
         <span className="font-mono text-[0.66rem] uppercase tracking-[0.18em] text-muted-2">

@@ -7,7 +7,7 @@ metadata:
 
 The portfolio was rebuilt (mid-2026) from a discarded neon sci-fi "ShoaibOS" site into **SIGNAL → Celestial Archive / Observatory Noir**: a dark midnight-indigo "research console / private archive" with subtle cosmic atmosphere and cockpit precision.
 
-- **Palette** (tailwind.config.ts): ink `#070A12`, panel `#0F1320`, hairline `#252D40`, fg `#ECEEF4`. Cold accent teal `#5BD7C8` = instruments/signal; warm accent amber `#F5A524` = cockpit indicators / verified proof (RATIONED — only marks real evidence); plum `#8B7BC0` = nebula atmosphere/mystery; crimson `#C8556A` = rare danger/classified.
+- **Palette** (tailwind.config.ts): VIOLET-black (not blue — Shoaib wanted more purple/nebula, less blue). ink `#08060F`, panel `#120F20`, hairline `#2B2740`, fg `#ECEAF4`. Cold accent teal `#5BD7C8` = instruments / interactive (buttons, links, ticks, traces) — KEPT; warm amber `#F5A524` = cockpit indicators / verified proof (RATIONED); plum `#A589D8` + nebula `#6E4FB0` = atmosphere/glow/mystery (backgrounds, hover blooms, starfield tints — NOT UI accents); crimson `#C8556A` = rare classified. Rule: teal = the cockpit, plum/indigo = the universe outside it.
 - **Type**: Fraunces (cinematic serif — hero/chapter titles), Space Grotesk (display — card/UI), Inter (body), JetBrains Mono (all labels/metadata). Via next/font.
 - **Signature motif**: the "signal trace" = noise resolving into a clean signal/trajectory ([SignalDivider.tsx], [Pipeline.tsx], [HeroSignal.tsx]). Doubles as flight path / orbit.
 - **Atmosphere**: [CosmicBackground.tsx] = perf canvas starfield (twinkle, drift, pointer parallax, rare trajectory streak), reduced-motion + tab-hidden aware. Nebula blooms via CSS body gradient.

@@ -30,7 +30,15 @@ type Streak = {
   max: number;
 } | null;
 
-const TINTS = ["255,255,255", "255,255,255", "255,255,255", "91,215,200", "139,123,192"];
+// mostly starlight, leaning violet/plum, with a single cool teal star in the mix
+const TINTS = [
+  "255,255,255",
+  "232,226,245",
+  "197,170,224",
+  "165,137,216",
+  "110,79,176",
+  "91,215,200",
+];
 
 export function CosmicBackground() {
   const ref = useRef<HTMLCanvasElement>(null);
@@ -145,8 +153,8 @@ export function CosmicBackground() {
         const tailX = streak.x - streak.vx * 90;
         const tailY = streak.y - streak.vy * 90;
         const grad = ctx.createLinearGradient(tailX, tailY, streak.x, streak.y);
-        grad.addColorStop(0, "rgba(91,215,200,0)");
-        grad.addColorStop(1, `rgba(91,215,200,${alpha})`);
+        grad.addColorStop(0, "rgba(165,137,216,0)");
+        grad.addColorStop(1, `rgba(165,137,216,${alpha})`);
         ctx.strokeStyle = grad;
         ctx.lineWidth = 1;
         ctx.beginPath();
@@ -200,7 +208,7 @@ export function CosmicBackground() {
       className="pointer-events-none fixed inset-0 -z-10"
       style={{
         // a faint vignette grounds the void
-        background: "radial-gradient(130% 90% at 50% 30%, transparent 55%, rgba(3,5,11,0.7) 100%)",
+        background: "radial-gradient(130% 90% at 50% 30%, transparent 55%, rgba(6,4,12,0.72) 100%)",
       }}
     >
       <canvas ref={ref} className="h-full w-full" />

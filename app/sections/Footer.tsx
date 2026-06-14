@@ -39,6 +39,9 @@ export function Footer() {
           <p className="mt-1 text-right font-mono text-[0.58rem] tracking-[0.2em] text-muted-2">
             13.0827°N 80.2707°E · CHENNAI
           </p>
+          <p className="mt-1 text-right font-mono text-[0.55rem] tracking-[0.18em] text-muted-2/70">
+            ✦ not all stars are fixed · the archive keeps notes
+          </p>
         </div>
       </div>
 

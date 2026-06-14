@@ -205,7 +205,7 @@ export const experienceHighlights = [
   {
     role: "Research Intern",
     org: "LLM Lens",
-    timeframe: "February 2025 - Present",
+    timeframe: "February 2026 - Present",
     location: "Remote",
     summary:
       "Working on LLM reliability and hallucination detection by studying internal transformer representations, uncertainty signals, and cross-layer behavior in modern language models.",
@@ -299,7 +299,7 @@ export const journey = [
     tags: ["CGPA 8.75/10", "Computer science", "Execution"],
   },
   {
-    label: "February 2025 - Present",
+    label: "February 2026 - Present",
     kind: "Research",
     title: "Research Intern",
     org: "LLM Lens",

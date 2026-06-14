@@ -7,26 +7,28 @@ const config: Config = {
     extend: {
       colors: {
         // Celestial Archive — Observatory Noir.
-        // Midnight-indigo void; nebula used as atmosphere, never wallpaper.
-        ink: "#070A12", // the void
-        "ink-2": "#0B0F1A", // raised band, faint indigo
-        panel: "#0F1320", // card — indigo graphite
-        "panel-2": "#141A2A", // raised panel
-        hairline: "#252D40", // cool blue-gray border
-        "hairline-soft": "#1A2030",
-        fg: "#ECEEF4", // starlight white
-        "fg-dim": "#B6BCCB",
-        muted: "#828AA0", // cool gray
-        "muted-2": "#565E73", // faint
-        // cold accent — instruments / signal
+        // Violet-black void; nebula (plum/indigo) is the atmosphere, teal is the
+        // instrument accent. More purple than blue, but never pink soup.
+        ink: "#08060F", // the void (faint violet-black)
+        "ink-2": "#0C0A18", // raised band
+        panel: "#120F20", // card — violet graphite
+        "panel-2": "#18142C", // raised panel
+        hairline: "#2B2740", // violet-gray border
+        "hairline-soft": "#1C1830",
+        fg: "#ECEAF4", // starlight white
+        "fg-dim": "#BAB6C8",
+        muted: "#8A86A0", // cool violet-gray
+        "muted-2": "#5C5873", // faint
+        // cold accent — instruments / signal / interactive (kept)
         teal: "#5BD7C8",
         "teal-dim": "#3A8F86",
         // warm accent — cockpit indicators / verified proof (rationed)
         amber: "#F5A524",
         "amber-dim": "#A8741E",
-        // nebula atmosphere / mystery (sparing)
-        plum: "#8B7BC0",
-        "plum-dim": "#5A4E86",
+        // nebula atmosphere / mystery — pushed up, used for ambience & glow
+        plum: "#A589D8",
+        "plum-dim": "#6B5AA0",
+        nebula: "#6E4FB0", // deep nebula, for atmospheric gradients
         // danger / mystery (rare)
         crimson: "#C8556A",
       },

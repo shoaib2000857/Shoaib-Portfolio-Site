@@ -45,7 +45,12 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
         </Link>
 
         <Reveal>
-          <div className="mt-8 flex flex-wrap items-center gap-3">
+          <p className="mt-8 font-mono text-[0.62rem] tracking-[0.2em] text-muted-2">
+            ARCHIVE · ENTRY {String(idx + 1).padStart(2, "0")} · CLASS: PUBLIC
+          </p>
+        </Reveal>
+        <Reveal delay={0.04}>
+          <div className="mt-3 flex flex-wrap items-center gap-3">
             <EvidenceTag tone={study.badgeTone}>{study.badge}</EvidenceTag>
             <span className="label text-muted-2">{study.year}</span>
           </div>
