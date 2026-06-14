@@ -6,10 +6,12 @@ export function CoreDirection() {
   return (
     <section className="shell section">
       <Reveal>
-        <SectionLabel index="02">Core direction</SectionLabel>
+        <SectionLabel index="02" meta="SECTOR: DIRECTION · 3 CHANNELS">
+          Core direction
+        </SectionLabel>
       </Reveal>
       <Reveal delay={0.06}>
-        <h2 className="mt-5 max-w-3xl font-display text-2xl leading-snug text-fg sm:text-3xl">
+        <h2 className="mt-5 max-w-3xl font-serif text-2xl leading-snug text-fg sm:text-4xl">
           I work where AI research meets shipped product.
         </h2>
       </Reveal>

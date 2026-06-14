@@ -15,19 +15,37 @@ export function Hero() {
     <section className="relative overflow-hidden pt-32 sm:pt-36">
       {/* soft teal glow, low and left, like an instrument's standby light */}
       <div
-        className="pointer-events-none absolute -left-40 top-10 h-[28rem] w-[28rem] rounded-full opacity-[0.18] blur-[120px]"
+        className="pointer-events-none absolute -left-40 top-10 h-[28rem] w-[28rem] rounded-full opacity-[0.16] blur-[120px]"
         style={{ background: "radial-gradient(circle, #5BD7C8, transparent 70%)" }}
         aria-hidden
       />
+      {/* faint orbital arc — observatory framing, not decoration overload */}
+      <svg
+        className="pointer-events-none absolute right-[-14rem] top-[-6rem] h-[40rem] w-[40rem] opacity-[0.5]"
+        viewBox="0 0 600 600"
+        fill="none"
+        aria-hidden
+      >
+        <circle cx="300" cy="300" r="250" stroke="#252D40" strokeWidth="1" />
+        <circle cx="300" cy="300" r="190" stroke="#1A2030" strokeWidth="1" strokeDasharray="3 7" />
+        <circle cx="300" cy="50" r="2.5" fill="#5BD7C8" opacity="0.7" />
+      </svg>
+
       <div className="shell grid items-center gap-12 pb-20 lg:grid-cols-[1.15fr_0.85fr]">
         <div>
           <Reveal>
             <p className="label">Shoaib Sadiq Salehmohamed</p>
           </Reveal>
+          <Reveal delay={0.04}>
+            <p className="mt-2 font-mono text-[0.6rem] tracking-[0.2em] text-muted-2">
+              OBSERVATORY · 17.3850°N 78.4867°E · HYDERABAD
+            </p>
+          </Reveal>
           <Reveal delay={0.08}>
-            <h1 className="mt-5 font-display text-4xl font-medium leading-[1.08] tracking-tight text-fg sm:text-5xl lg:text-6xl">
-              I build AI systems that turn <span className="text-muted">uncertainty</span> into{" "}
-              <span className="relative whitespace-nowrap text-teal">
+            <h1 className="mt-6 font-serif text-4xl font-medium leading-[1.06] tracking-tight text-fg sm:text-5xl lg:text-6xl">
+              I build AI systems that turn <span className="italic text-muted">uncertainty</span>{" "}
+              into{" "}
+              <span className="relative whitespace-nowrap italic text-teal">
                 usable signal
                 <span className="absolute -bottom-1 left-0 h-px w-full bg-teal/40" />
               </span>

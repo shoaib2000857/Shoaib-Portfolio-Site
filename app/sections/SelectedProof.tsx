@@ -8,7 +8,9 @@ export function SelectedProof() {
     <section className="border-y border-hairline bg-ink-2">
       <div className="shell section">
         <Reveal>
-          <SectionLabel index="01">Selected proof</SectionLabel>
+          <SectionLabel index="01" meta="SECTOR: PROOF · CLASS: PUBLIC">
+            Selected proof
+          </SectionLabel>
         </Reveal>
         <Reveal delay={0.06}>
           <p className="mt-5 max-w-2xl text-lg text-fg-dim">

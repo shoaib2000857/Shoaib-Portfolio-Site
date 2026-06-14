@@ -8,10 +8,12 @@ export function Contact() {
     <section id="contact" className="border-t border-hairline bg-ink-2">
       <div className="shell section">
         <Reveal>
-          <SectionLabel index="07">Contact</SectionLabel>
+          <SectionLabel index="07" meta="SECTOR: COMMS · CHANNEL: OPEN">
+            Contact
+          </SectionLabel>
         </Reveal>
         <Reveal delay={0.06}>
-          <h2 className="mt-6 max-w-3xl font-display text-3xl leading-tight text-fg sm:text-4xl">
+          <h2 className="mt-6 max-w-3xl font-serif text-3xl leading-tight text-fg sm:text-5xl">
             Want to build, research, or collaborate?
           </h2>
         </Reveal>

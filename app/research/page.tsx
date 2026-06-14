@@ -74,7 +74,7 @@ export default function ResearchPage() {
           <Reveal delay={0.06}>
             <div className="mt-8 rounded-lg border border-hairline bg-panel p-7 sm:p-8">
               <EvidenceTag>arXiv · 2026</EvidenceTag>
-              <h2 className="mt-5 max-w-3xl font-display text-2xl leading-snug text-fg">
+              <h2 className="mt-5 max-w-3xl font-serif text-2xl leading-snug text-fg sm:text-3xl">
                 Weakly Supervised Distillation of Hallucination Signals into Transformer
                 Representations
               </h2>

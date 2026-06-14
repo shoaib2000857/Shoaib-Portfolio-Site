@@ -8,10 +8,12 @@ export function ResearchStrip() {
   return (
     <section className="shell section">
       <Reveal>
-        <SectionLabel index="04">Research</SectionLabel>
+        <SectionLabel index="04" meta="SECTOR: RESEARCH · CLASS: ONGOING">
+          Research
+        </SectionLabel>
       </Reveal>
       <Reveal delay={0.06}>
-        <h2 className="mt-5 max-w-3xl font-display text-2xl leading-snug text-fg sm:text-3xl">
+        <h2 className="mt-5 max-w-3xl font-serif text-2xl leading-snug text-fg sm:text-4xl">
           Researching how language models fail — and how systems can respond.
         </h2>
       </Reveal>

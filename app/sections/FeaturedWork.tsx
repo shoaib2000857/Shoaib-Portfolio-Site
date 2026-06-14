@@ -11,10 +11,12 @@ export function FeaturedWork() {
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
             <Reveal>
-              <SectionLabel index="03">Featured work</SectionLabel>
+              <SectionLabel index="03" meta="SECTOR: ARCHIVE · ENTRIES: 05">
+                Featured work
+              </SectionLabel>
             </Reveal>
             <Reveal delay={0.06}>
-              <h2 className="mt-5 max-w-2xl font-display text-2xl leading-snug text-fg sm:text-3xl">
+              <h2 className="mt-5 max-w-2xl font-serif text-2xl leading-snug text-fg sm:text-4xl">
                 Five things that matter — each one a problem turned into a working system.
               </h2>
             </Reveal>

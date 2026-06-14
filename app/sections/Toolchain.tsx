@@ -6,10 +6,12 @@ export function Toolchain() {
   return (
     <section className="shell section">
       <Reveal>
-        <SectionLabel index="06">Toolchain</SectionLabel>
+        <SectionLabel index="06" meta="SECTOR: SYSTEMS">
+          Toolchain
+        </SectionLabel>
       </Reveal>
       <Reveal delay={0.06}>
-        <h2 className="mt-5 max-w-2xl font-display text-2xl leading-snug text-fg sm:text-3xl">
+        <h2 className="mt-5 max-w-2xl font-serif text-2xl leading-snug text-fg sm:text-4xl">
           What I reach for.
         </h2>
       </Reveal>

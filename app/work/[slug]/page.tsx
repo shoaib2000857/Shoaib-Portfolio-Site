@@ -5,6 +5,7 @@ import { caseStudies, getCaseStudy } from "../../data/content";
 import { EvidenceTag } from "../../components/EvidenceTag";
 import { Pipeline } from "../../components/Pipeline";
 import { Reveal } from "../../components/Reveal";
+import { Declassify } from "../../components/Declassify";
 
 export function generateStaticParams() {
   return caseStudies.map((c) => ({ slug: c.slug }));
@@ -50,7 +51,7 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
           </div>
         </Reveal>
         <Reveal delay={0.06}>
-          <h1 className="mt-5 font-display text-4xl font-medium tracking-tight text-fg sm:text-6xl">
+          <h1 className="mt-5 font-serif text-4xl font-medium tracking-tight text-fg sm:text-6xl">
             {study.title}
           </h1>
         </Reveal>
@@ -130,6 +131,15 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
         )}
       </div>
 
+      {/* field note — classified until you ask for it */}
+      {study.fieldNote && (
+        <Reveal>
+          <div className="shell mt-10">
+            <Declassify note={study.fieldNote} />
+          </div>
+        </Reveal>
+      )}
+
       {/* next */}
       <div className="shell mt-12">
         <Link
@@ -138,7 +148,7 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
         >
           <span>
             <span className="label">Next</span>
-            <span className="mt-1.5 block font-display text-xl text-fg">{next.title}</span>
+            <span className="mt-1.5 block font-serif text-xl text-fg">{next.title}</span>
           </span>
           <span className="font-mono text-teal transition-transform group-hover:translate-x-1">
             →

@@ -16,6 +16,8 @@ export type CaseStudy = {
   problem: string;
   built: string;
   role: string;
+  /** a personal "field note" — starts redacted, declassifies on click */
+  fieldNote?: string;
   /** the signature pipeline: messy input → usable signal */
   pipeline: string[];
   outcomes: string[];
@@ -40,6 +42,8 @@ export const caseStudies: CaseStudy[] = [
     built:
       "A full pipeline: fine-tuned DeBERTa-v3-Large models for AI-generated content detection and model-family attribution, layered with graph intelligence for coordinated-campaign discovery, explainable risk scoring, real-time SSE dashboards, and tamper-proof, blockchain-backed audit trails.",
     role: "Full-stack and system design — model integration, the analyst-facing interface, real-time data flow, and the audit layer.",
+    fieldNote:
+      "36 hours, no sleep, and a model that refused to converge until 4 a.m. We didn't build a classifier — we built something an analyst could actually defend in a room.",
     pipeline: ["Content", "Detection", "Attribution", "Risk score", "Analyst dashboard"],
     outcomes: [
       "Won Smart India Hackathon 2025 under the AICTE Cybersecurity Cell.",
@@ -65,6 +69,8 @@ export const caseStudies: CaseStudy[] = [
     built:
       "PyTorch pipelines that extract hidden-state embeddings from models like LLaMA and Qwen, cross-layer and hierarchical probing architectures that model correlations across layers, scalable labelled-dataset generation, and a full evaluation suite — ROC-AUC, PR-AUC, F1, Expected Calibration Error, Brier score, threshold optimization — across A100/H100 GPUs.",
     role: "Research intern — experimentation pipelines, probing architectures, dataset construction, and evaluation. Co-author on the resulting paper.",
+    fieldNote:
+      "The fascinating part: a model often 'knows' it's about to make something up — the uncertainty is sitting right there in the activations, if you know where to look.",
     pipeline: ["Prompt", "Model", "Hidden states", "Probe", "Reliability signal"],
     outcomes: [
       "Co-authored arXiv:2604.06277 on distilling hallucination signals into transformer representations.",
@@ -89,6 +95,8 @@ export const caseStudies: CaseStudy[] = [
     built:
       "An integrated rover on Jetson Nano + Pixhawk fusing LiDAR, GPS, IMU, and vision, with hybrid mission logic, dual-mode control, obstacle avoidance, face recognition, real-time video streaming, and telemetry.",
     role: "Led the project end-to-end — system integration, mission logic, safety overrides, and the perception/telemetry stack.",
+    fieldNote:
+      "Real hardware humbles you fast. The sim was flawless; the field had dust, GPS drift, and a rover that wanted to drive into a wall. Making it hold together taught me more than any course.",
     pipeline: ["Sensors", "Perception", "Localization", "Control", "Autonomous patrol"],
     outcomes: [
       "Co-inventor on published Indian Patent Application No. 202541112724 A (Jan 2026).",
@@ -116,6 +124,8 @@ export const caseStudies: CaseStudy[] = [
     built:
       "A FastAPI + Next.js platform with WebSockets for live messaging, Redis for presence and caching, PostgreSQL and MongoDB for state, and optimized ML inference for in-line translation.",
     role: "Full-stack — backend services, real-time layer, data modelling, and the inference path.",
+    fieldNote:
+      "Three databases is two too many — until you actually need presence, history, and state at once. Latency is the whole product; everything else is negotiable.",
     pipeline: ["Message", "Inference", "Translation", "WebSocket", "Delivery"],
     outcomes: [
       "Live cross-language messaging with optimized inference.",
@@ -139,6 +149,8 @@ export const caseStudies: CaseStudy[] = [
     built:
       "A FastAPI + React system with local LLM workflows, streaming chat, persistent memory, and document-grounded retrieval — built with desktop-native ambition.",
     role: "Solo — architecture, backend, retrieval, and interface.",
+    fieldNote:
+      "Building the assistant I actually wanted: one that remembers, runs locally, and never quietly ships my notes to someone else's cloud. Ambitious for a side project — which is exactly why I'm building it.",
     pipeline: ["Query", "Retrieval", "Memory", "Local LLM", "Response"],
     outcomes: [
       "Persistent memory across sessions with local-first privacy.",

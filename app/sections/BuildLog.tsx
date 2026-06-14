@@ -7,10 +7,12 @@ export function BuildLog() {
     <section className="border-t border-hairline bg-ink-2">
       <div className="shell section">
         <Reveal>
-          <SectionLabel index="05">Build log</SectionLabel>
+          <SectionLabel index="05" meta="SECTOR: LOG · CHRONOLOGICAL">
+            Build log
+          </SectionLabel>
         </Reveal>
         <Reveal delay={0.06}>
-          <h2 className="mt-5 max-w-2xl font-display text-2xl leading-snug text-fg sm:text-3xl">
+          <h2 className="mt-5 max-w-2xl font-serif text-2xl leading-snug text-fg sm:text-4xl">
             A running record of what got built, won, and shipped.
           </h2>
         </Reveal>
