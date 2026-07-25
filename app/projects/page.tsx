@@ -1,62 +1,50 @@
 import type { Metadata } from "next";
-import { ActionLink } from "../components/ActionLink";
-import { AmbientBackground } from "../components/AmbientBackground";
-import { CustomCursor } from "../components/CustomCursor";
-import { InteractionProvider } from "../components/InteractionProvider";
-import { ScrollProgress } from "../components/ScrollProgress";
-import { profile } from "../data/portfolio";
 import { projectArchiveItems, projectArchiveSummary } from "../data/projectArchive";
 import { ProjectsArchiveClient } from "./ProjectsArchiveClient";
 
 export const metadata: Metadata = {
-  title: "Project Archive | Shoaib Sadiq Salehmohamed",
+  title: "Project Archive — Shoaib SSM",
   description:
-    "Full project archive for Shoaib Sadiq Salehmohamed, generated from a GitHub inventory of personal and organization repositories.",
+    "A searchable inventory of Shoaib SSM's public personal, team, coursework, and open-source repositories.",
 };
 
 export default function ProjectsPage() {
   return (
-    <div className="site-shell">
-      <InteractionProvider>
-        <AmbientBackground />
-        <ScrollProgress />
-        <CustomCursor />
+    <main className="archive-page">
+      <div className="ambient-canvas" aria-hidden="true">
+        <div className="nebula nebula-one" />
+        <div className="nebula nebula-two" />
+        <div className="grain" />
+      </div>
 
-        <main className="content-shell">
-          <section className="px-4 pb-8 pt-28 sm:px-6">
-            <div className="mx-auto max-w-7xl">
-              <div className="panel-shell p-7 md:p-10">
-                <div className="flex flex-wrap gap-3">
-                  <ActionLink href="/" variant="ghost">
-                    Back To Landing
-                  </ActionLink>
-                  <ActionLink
-                    href={profile.website}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    variant="ghost"
-                  >
-                    Main Domain
-                  </ActionLink>
-                </div>
+      <header className="archive-header">
+        <a href="/" className="wordmark" aria-label="Back to Shoaib SSM portfolio">
+          <span className="wordmark-mark">S</span>
+          <span className="wordmark-copy">
+            Shoaib <em>SSM</em>
+          </span>
+        </a>
+        <nav className="archive-header-links" aria-label="Archive navigation">
+          <a href="/">Portfolio</a>
+          <a href="/#work">Selected work</a>
+          <a href="/#contact">Contact</a>
+        </nav>
+      </header>
 
-                <p className="eyebrow mt-8">Repository Archive</p>
-                <h1 className="mt-4 max-w-4xl font-display text-4xl uppercase tracking-[0.16em] text-white md:text-6xl">
-                  Every Project In The System
-                </h1>
-                <p className="mt-6 max-w-3xl text-base leading-8 text-[color:var(--text-secondary)] md:text-lg">
-                  This page is generated from your GitHub inventory dump. It keeps the landing page
-                  curated, while this archive exposes the full graph of personal builds,
-                  organization work, experiments, forks, and shipped deployments with direct repo
-                  links.
-                </p>
-              </div>
-            </div>
-          </section>
+      <section className="archive-hero archive-section">
+        <div className="section-kicker">
+          <span>Archive</span>
+          <span>Public GitHub inventory</span>
+        </div>
+        <h1>The complete build log.</h1>
+        <p>
+          The homepage is intentionally selective. This is the wider record: original products, team
+          repositories, open-source contributions, coursework, prototypes, and unfinished
+          experiments—searchable without pretending they all deserve equal weight.
+        </p>
+      </section>
 
-          <ProjectsArchiveClient projects={projectArchiveItems} summary={projectArchiveSummary} />
-        </main>
-      </InteractionProvider>
-    </div>
+      <ProjectsArchiveClient projects={projectArchiveItems} summary={projectArchiveSummary} />
+    </main>
   );
 }
